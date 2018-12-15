@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2018-12-15T05:19:30.689Z</updated>
+  <updated>2018-12-15T13:04:15.026Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://ixyxj.github.io/2018/12/15/hello-world/"/>
-    <id>https://ixyxj.github.io/2018/12/15/hello-world/</id>
-    <published>2018-12-15T05:19:30.688Z</published>
-    <updated>2018-12-15T05:19:30.689Z</updated>
+    <title>Hexo搭建博客在GithubPages</title>
+    <link href="https://ixyxj.github.io/2018/12/15/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9C%A8GithubPages/"/>
+    <id>https://ixyxj.github.io/2018/12/15/Hexo搭建博客在GithubPages/</id>
+    <published>2018-12-15T13:04:15.000Z</published>
+    <updated>2018-12-15T13:04:15.026Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,25 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;h1 id=&quot;开始&quot;&gt;&lt;a href=&quot;#开始&quot; class=&quot;headerlink&quot; title=&quot;开始&quot;&gt;&lt;/a&gt;开始&lt;/h1&gt;&lt;p&gt;首先得有一个github账户,如果没有&lt;a
         
       
+    
+    </summary>
+    
+    
+      <category term="blog" scheme="https://ixyxj.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQL入门</title>
+    <link href="https://ixyxj.github.io/2018/12/15/SQL%E5%85%A5%E9%97%A8/"/>
+    <id>https://ixyxj.github.io/2018/12/15/SQL入门/</id>
+    <published>2018-12-15T12:34:12.000Z</published>
+    <updated>2018-12-15T12:34:12.680Z</updated>
+    
+    <summary type="html">
     
     </summary>
     
