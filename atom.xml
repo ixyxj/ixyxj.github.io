@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-01-02T14:28:11.331Z</updated>
+  <updated>2019-01-07T15:53:00.763Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -17,11 +17,60 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>大数据入门概述</title>
+    <link href="https://ixyxj.github.io/2019/01/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/"/>
+    <id>https://ixyxj.github.io/2019/01/07/大数据入门概述/</id>
+    <published>2019-01-07T15:53:00.000Z</published>
+    <updated>2019-01-07T15:53:00.763Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;基于hadoop2-x大数据框架&quot;&gt;&lt;a href=&quot;#基于hadoop2-x大数据框架&quot; class=&quot;headerlink&quot; title=&quot;基于hadoop2.x大数据框架&quot;&gt;&lt;/a&gt;基于hadoop2.x大数据框架&lt;/h3&gt;&lt;p&gt;官网: &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Bigdata" scheme="https://ixyxj.github.io/tags/Bigdata/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Scala进阶</title>
+    <link href="https://ixyxj.github.io/2019/01/07/Scala%E8%BF%9B%E9%98%B6/"/>
+    <id>https://ixyxj.github.io/2019/01/07/Scala进阶/</id>
+    <published>2019-01-07T14:34:05.000Z</published>
+    <updated>2019-01-07T14:34:05.109Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Scala的设计理念&quot;&gt;&lt;a href=&quot;#Scala的设计理念&quot; class=&quot;headerlink&quot; title=&quot;Scala的设计理念&quot;&gt;&lt;/a&gt;Scala的设计理念&lt;/h3&gt;&lt;p&gt;简单的说就是讲不同语言中的多个概念融合在一起&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Scala" scheme="https://ixyxj.github.io/tags/Scala/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Android签名工具Keytool</title>
     <link href="https://ixyxj.github.io/2019/01/02/Android%E7%AD%BE%E5%90%8D%E5%B7%A5%E5%85%B7Keytool/"/>
     <id>https://ixyxj.github.io/2019/01/02/Android签名工具Keytool/</id>
     <published>2019-01-02T14:27:41.000Z</published>
-    <updated>2019-01-02T14:28:11.331Z</updated>
+    <updated>2019-01-02T15:00:50.341Z</updated>
     
     <summary type="html">
     
@@ -45,7 +94,7 @@
     <link href="https://ixyxj.github.io/2018/12/26/Scala%E5%85%A5%E9%97%A8/"/>
     <id>https://ixyxj.github.io/2018/12/26/Scala入门/</id>
     <published>2018-12-26T08:39:42.000Z</published>
-    <updated>2018-12-28T12:55:57.492Z</updated>
+    <updated>2019-01-07T16:06:42.337Z</updated>
     
     <summary type="html">
     
@@ -53,7 +102,7 @@
       
         
         
-          &lt;h3 id=&quot;Scala简介&quot;&gt;&lt;a href=&quot;#Scala简介&quot; class=&quot;headerlink&quot; title=&quot;Scala简介&quot;&gt;&lt;/a&gt;Scala简介&lt;/h3&gt;&lt;h3 id=&quot;本地环境配置&quot;&gt;&lt;a href=&quot;#本地环境配置&quot; class=&quot;headerlink&quot;
+          &lt;h3 id=&quot;Scala简介&quot;&gt;&lt;a href=&quot;#Scala简介&quot; class=&quot;headerlink&quot; title=&quot;Scala简介&quot;&gt;&lt;/a&gt;Scala简介&lt;/h3&gt;&lt;p&gt;官方教程: Twitter: &lt;a
         
       
     
