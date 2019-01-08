@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-01-07T15:53:00.763Z</updated>
+  <updated>2019-01-08T07:11:25.920Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>大数据之配置本地虚拟机集群</title>
+    <link href="https://ixyxj.github.io/2019/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8B%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9B%86%E7%BE%A4/"/>
+    <id>https://ixyxj.github.io/2019/01/08/大数据之配置本地虚拟机集群/</id>
+    <published>2019-01-08T07:11:25.000Z</published>
+    <updated>2019-01-08T07:11:25.920Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;大数据需要多台服务器集群, 如果用云服务器的话让很多新手都望之却步,
+        
+      
+    
+    </summary>
+    
+    
+      <category term="bigdata" scheme="https://ixyxj.github.io/tags/bigdata/"/>
+    
+  </entry>
+  
+  <entry>
     <title>大数据入门概述</title>
     <link href="https://ixyxj.github.io/2019/01/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/"/>
     <id>https://ixyxj.github.io/2019/01/07/大数据入门概述/</id>
     <published>2019-01-07T15:53:00.000Z</published>
-    <updated>2019-01-07T15:53:00.763Z</updated>
+    <updated>2019-01-07T16:46:42.362Z</updated>
     
     <summary type="html">
     
