@@ -99,6 +99,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="ixyxj" type="application/atom+xml">
 
@@ -117,7 +119,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ixyxj.github.io/2019/01/08/大数据之配置本地虚拟机集群/1.png">
 <meta property="og:image" content="https://ixyxj.github.io/2019/01/08/大数据之配置本地虚拟机集群/2.png">
-<meta property="og:updated_time" content="2019-01-08T07:11:25.920Z">
+<meta property="og:updated_time" content="2019-01-08T16:21:34.623Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大数据之配置本地虚拟机集群">
 <meta name="twitter:description" content="概述大数据需要多台服务器集群, 如果用云服务器的话让很多新手都望之却步, 我们来配置穷逼本地虚拟机集群.这也为后面的hadoop和spark开发做准备.让我们键盘作伴开始吧. 安装Ubuntu Server在安装ubuntu之前,需要安装虚拟机软件,本文使用Vmare15, 安装配置自行搞定.  下载Ubuntu server 18.10: 下载地址 安装过程参考官网: 教程  下面说明介个问题:">
@@ -442,9 +444,23 @@
 </ul>
 <p>配置: 在/etc/resolvconf/resolv.conf.d/新建一个tail文件写入:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nameserver 192.168.1.1</span><br><span class="line">nameserver xx.xx.xx.xx</span><br></pre></td></tr></table></figure>
-<p>​</p>
 </li>
 </ul>
+<h3 id="远程控制server"><a href="#远程控制server" class="headerlink" title="远程控制server"></a>远程控制server</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br><span class="line">sudo apt install openssh-server				#ubuntu18已经安装好了</span><br><span class="line">sudo apt install openssh-client</span><br></pre></td></tr></table></figure>
+<h3 id="安装JDK"><a href="#安装JDK" class="headerlink" title="安装JDK"></a>安装JDK</h3><p>使用没有界面的jdk所用需要使用wget来下载jdk,安装openjdk也是一样;</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 只有这样才能下载成功</span><br><span class="line"><span class="meta">&gt;</span> wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz</span><br><span class="line"><span class="meta">#</span> 解压</span><br><span class="line"><span class="meta">&gt;</span> tar -zxvf jdk-8u191-linux-x64.tar.gz -C /usr/lib/jvm/</span><br><span class="line"><span class="meta">&gt;</span> sudo ln -s jdk1.8.0_191 java</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 下载scala</span><br><span class="line"><span class="meta">&gt;</span> wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" https://downloads.lightbend.com/scala/2.12.8/scala-2.12.8.tgz</span><br><span class="line"><span class="meta">&gt;</span> tar zxvf scala-2.12.8.tgz -C /usr/lib/jvm/</span><br><span class="line"><span class="meta">&gt;</span> cd /usr/lib/jvm/</span><br><span class="line"><span class="meta">&gt;</span> sudo ln -s scala-2.12.8 scala</span><br></pre></td></tr></table></figure>
+<p>测试Scala</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">xyxj@u18_data1:~$ scala</span><br><span class="line">Welcome to Scala 2.12.8 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_191).</span><br><span class="line">Type in expressions for evaluation. Or try :help.</span><br><span class="line"><span class="meta">scala&gt;</span> :help</span><br><span class="line">All commands can be abbreviated, e.g., :he instead of :help.</span><br><span class="line">:completions &lt;string&gt;    output completions for the given string</span><br><span class="line">:edit &lt;id&gt;|&lt;line&gt;        edit history</span><br><span class="line">:help [command]          print this summary or command-specific help</span><br><span class="line">:history [num]           show the history (optional num is commands to show)</span><br><span class="line">:h? &lt;string&gt;             search the history</span><br><span class="line">:imports [name name ...] show import history, identifying sources of names</span><br><span class="line">:implicits [-v]          show the implicits in scope</span><br><span class="line">:javap &lt;path|class&gt;      disassemble a file or class name</span><br><span class="line">:line &lt;id&gt;|&lt;line&gt;        place line(s) at the end of history</span><br><span class="line">:load &lt;path&gt;             interpret lines in a file</span><br><span class="line">:paste [-raw] [path]     enter paste mode or paste a file</span><br><span class="line">:power                   enable power user mode</span><br><span class="line">:quit                    exit the interpreter</span><br><span class="line">:replay [options]        reset the repl and replay all previous commands</span><br><span class="line">:require &lt;path&gt;          add a jar to the classpath</span><br><span class="line">:reset [options]         reset the repl to its initial state, forgetting all session entries</span><br><span class="line">:save &lt;path&gt;             save replayable session to a file</span><br><span class="line">:sh &lt;command line&gt;       run a shell command (result is implicitly =&gt; List[String])</span><br><span class="line">:settings &lt;options&gt;      update compiler options, if possible; see reset</span><br><span class="line">:silent                  disable/enable automatic printing of results</span><br><span class="line">:type [-v] &lt;expr&gt;        display the type of an expression without evaluating it</span><br><span class="line">:kind [-v] &lt;type&gt;        display the kind of a type. see also :help kind</span><br><span class="line">:warnings                show the suppressed warnings from the most recent line which had any</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 退出</span><br><span class="line"><span class="meta">scala&gt;</span> :quit</span><br></pre></td></tr></table></figure>
+<h3 id="免密钥登录"><a href="#免密钥登录" class="headerlink" title="免密钥登录"></a>免密钥登录</h3><p>需要使用ssh-keygen创建一对公私钥. 由于ubuntu18已经安装ssh,如果没有安装需要安装:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install ssh</span><br><span class="line"><span class="meta">#</span> create</span><br><span class="line">ssh-keygen -t rsa</span><br></pre></td></tr></table></figure>
+<p>略…..</p>
+<ol>
+<li>先将win10免密钥登录主虚拟机</li>
+</ol>
+<p><strong>将win10上的公钥拷贝到/.ssh/authorized_keys</strong></p>
+<ol start="2">
+<li>然后将各个界面的公钥相互验证….完毕</li>
+</ol>
 
       
     </div>
@@ -513,6 +529,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/09/Linux基础/" rel="prev" title="Linux基础">
+                Linux基础 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -591,7 +611,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -604,7 +624,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -660,7 +680,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Ubuntu-Server"><span class="nav-number">2.</span> <span class="nav-text">安装Ubuntu Server</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#概述"><span class="nav-number">1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Ubuntu-Server"><span class="nav-number">2.</span> <span class="nav-text">安装Ubuntu Server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#远程控制server"><span class="nav-number">3.</span> <span class="nav-text">远程控制server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装JDK"><span class="nav-number">4.</span> <span class="nav-text">安装JDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#免密钥登录"><span class="nav-number">5.</span> <span class="nav-text">免密钥登录</span></a></li></ol></div>
             
 
           </div>
