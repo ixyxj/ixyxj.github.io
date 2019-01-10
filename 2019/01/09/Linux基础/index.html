@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="ixyxj">
 <meta property="og:description" content="解压缩tar 解压缩命令 : c: 建立压缩档案-x：解压-t：查看内容-r：向压缩归档文件末尾追加文件-u：更新原压缩包中的文件这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。-z：有gzip属性的-j：有bz2属性的-Z：有compress属性的-v：显示所有过程-O：将文件解开到标准输出下面的参数-f是必须的-f">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-09T14:24:57.997Z">
+<meta property="og:updated_time" content="2019-01-10T09:47:39.630Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux基础">
 <meta name="twitter:description" content="解压缩tar 解压缩命令 : c: 建立压缩档案-x：解压-t：查看内容-r：向压缩归档文件末尾追加文件-u：更新原压缩包中的文件这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。-z：有gzip属性的-j：有bz2属性的-Z：有compress属性的-v：显示所有过程-O：将文件解开到标准输出下面的参数-f是必须的-f">
@@ -399,6 +399,10 @@
       
         <h3 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h3><p>tar 解压缩命令 :</p>
 <p>c: 建立压缩档案<br>-x：解压<br>-t：查看内容<br>-r：向压缩归档文件末尾追加文件<br>-u：更新原压缩包中的文件<br>这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。<br>-z：有gzip属性的<br>-j：有bz2属性的<br>-Z：有compress属性的<br>-v：显示所有过程<br>-O：将文件解开到标准输出<br>下面的参数-f是必须的<br>-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。</p>
+<h3 id="更改主机名"><a href="#更改主机名" class="headerlink" title="更改主机名"></a>更改主机名</h3><p>查看</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">xyxj@u18_data1:~$ hostnamectl</span><br><span class="line">   Static hostname: Master		#静态主机名</span><br><span class="line">Transient hostname: u18_data1   #临时主机名</span><br><span class="line">         Icon name: computer-vm</span><br><span class="line">           Chassis: vm</span><br><span class="line">        Machine ID: 67f22187487a4bbd893048a9f7b4bb13</span><br><span class="line">           Boot ID: ce03c7b8874e4b75ab0bb71c886fd3fe</span><br><span class="line">    Virtualization: vmware</span><br><span class="line">  Operating System: Ubuntu 18.10</span><br><span class="line">            Kernel: Linux 4.18.0-13-generic</span><br><span class="line">      Architecture: x86-64</span><br></pre></td></tr></table></figure>
+<p>操作</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xyxj@u18_data1:~$ sudo hostname Master-name		#更改临时主机名</span><br><span class="line">xyxj@u18_data1:~$ sudo hostnamectl set-hostname Master #更改静态主机名</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -614,7 +618,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#解压缩"><span class="nav-number">1.</span> <span class="nav-text">解压缩</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#解压缩"><span class="nav-number">1.</span> <span class="nav-text">解压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改主机名"><span class="nav-number">2.</span> <span class="nav-text">更改主机名</span></a></li></ol></div>
             
 
           </div>
