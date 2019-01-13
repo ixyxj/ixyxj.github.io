@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="Bigdata,">
+  <meta name="keywords" content="Shell,">
 
 
 
@@ -107,18 +107,18 @@
 
 
 
-<meta name="description" content="基于hadoop2.x大数据框架官网: https://hadoop.apache.org/ MapReduce: 并行计算框架 HDFS: 数据存储 Yarn: 分布式集群管理和任务调度 Hive: 基于sql的处理框架 Hbase: 分布式数据库 sqoop: 数据迁移工具 基于storm体系的实时流处理框架官方: http://storm.apache.org/ 实时数据产生和数据处理 场景">
-<meta name="keywords" content="Bigdata">
+<meta name="description" content="Bash的理解文件和流重定向 ls   从左向右以此绑定 &amp;gt; 左边不能包含空格 &amp;gt;&amp;amp;特殊写法 2&amp;gt;&amp;amp;1 1&amp;gt;xxx.out  变量 exec   特殊变量   $# $* $@   管道 |   环境变量  引用和判断逻辑 退出状态   echo $?   逻辑判断   &amp;amp;&amp;amp; ||  表达式 算数表达式   条件表达式  1234567891011121">
+<meta name="keywords" content="Shell">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大数据入门概述">
-<meta property="og:url" content="https://ixyxj.github.io/2019/01/07/大数据入门概述/index.html">
+<meta property="og:title" content="shell实战">
+<meta property="og:url" content="https://ixyxj.github.io/2019/01/10/shell实战/index.html">
 <meta property="og:site_name" content="ixyxj">
-<meta property="og:description" content="基于hadoop2.x大数据框架官网: https://hadoop.apache.org/ MapReduce: 并行计算框架 HDFS: 数据存储 Yarn: 分布式集群管理和任务调度 Hive: 基于sql的处理框架 Hbase: 分布式数据库 sqoop: 数据迁移工具 基于storm体系的实时流处理框架官方: http://storm.apache.org/ 实时数据产生和数据处理 场景">
+<meta property="og:description" content="Bash的理解文件和流重定向 ls   从左向右以此绑定 &amp;gt; 左边不能包含空格 &amp;gt;&amp;amp;特殊写法 2&amp;gt;&amp;amp;1 1&amp;gt;xxx.out  变量 exec   特殊变量   $# $* $@   管道 |   环境变量  引用和判断逻辑 退出状态   echo $?   逻辑判断   &amp;amp;&amp;amp; ||  表达式 算数表达式   条件表达式  1234567891011121">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T16:46:42.362Z">
+<meta property="og:updated_time" content="2019-01-10T18:09:39.245Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="大数据入门概述">
-<meta name="twitter:description" content="基于hadoop2.x大数据框架官网: https://hadoop.apache.org/ MapReduce: 并行计算框架 HDFS: 数据存储 Yarn: 分布式集群管理和任务调度 Hive: 基于sql的处理框架 Hbase: 分布式数据库 sqoop: 数据迁移工具 基于storm体系的实时流处理框架官方: http://storm.apache.org/ 实时数据产生和数据处理 场景">
+<meta name="twitter:title" content="shell实战">
+<meta name="twitter:description" content="Bash的理解文件和流重定向 ls   从左向右以此绑定 &amp;gt; 左边不能包含空格 &amp;gt;&amp;amp;特殊写法 2&amp;gt;&amp;amp;1 1&amp;gt;xxx.out  变量 exec   特殊变量   $# $* $@   管道 |   环境变量  引用和判断逻辑 退出状态   echo $?   逻辑判断   &amp;amp;&amp;amp; ||  表达式 算数表达式   条件表达式  1234567891011121">
 
 
 
@@ -148,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="https://ixyxj.github.io/2019/01/07/大数据入门概述/">
+  <link rel="canonical" href="https://ixyxj.github.io/2019/01/10/shell实战/">
 
 
 
 
 
-  <title>大数据入门概述 | ixyxj</title>
+  <title>shell实战 | ixyxj</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ixyxj.github.io/2019/01/07/大数据入门概述/">
+    <link itemprop="mainEntityOfPage" href="https://ixyxj.github.io/2019/01/10/shell实战/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xyxj">
@@ -328,7 +328,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">大数据入门概述</h2>
+          <h2 class="post-title" itemprop="name headline">shell实战</h2>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-07T23:53:00+08:00">
-                2019-01-07
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-10T20:56:25+08:00">
+                2019-01-10
               </time>
             
 
@@ -397,33 +397,51 @@
       
 
       
-        <h3 id="基于hadoop2-x大数据框架"><a href="#基于hadoop2-x大数据框架" class="headerlink" title="基于hadoop2.x大数据框架"></a>基于hadoop2.x大数据框架</h3><p>官网: <a href="https://hadoop.apache.org/" target="_blank" rel="noopener">https://hadoop.apache.org/</a></p>
-<p>MapReduce: 并行计算框架</p>
-<p>HDFS: 数据存储</p>
-<p>Yarn: 分布式集群管理和任务调度</p>
-<p>Hive: 基于sql的处理框架</p>
-<p>Hbase: 分布式数据库</p>
-<p>sqoop: 数据迁移工具</p>
-<h3 id="基于storm体系的实时流处理框架"><a href="#基于storm体系的实时流处理框架" class="headerlink" title="基于storm体系的实时流处理框架"></a>基于storm体系的实时流处理框架</h3><p>官方: <a href="http://storm.apache.org/" target="_blank" rel="noopener">http://storm.apache.org/</a></p>
-<p>实时数据产生和数据处理</p>
-<p>场景:</p>
+        <h3 id="Bash的理解"><a href="#Bash的理解" class="headerlink" title="Bash的理解"></a>Bash的理解</h3><h3 id="文件和流重定向"><a href="#文件和流重定向" class="headerlink" title="文件和流重定向"></a>文件和流重定向</h3><blockquote>
+<p>ls</p>
+</blockquote>
 <ul>
-<li>监控</li>
-<li>电商</li>
+<li><strong>从左向右以此绑定</strong></li>
+<li>> 左边不能包含空格</li>
+<li>>&amp;特殊写法 2&gt;&amp;1 1&gt;xxx.out</li>
 </ul>
-<h3 id="基于Spark体系的大数据处理框架"><a href="#基于Spark体系的大数据处理框架" class="headerlink" title="基于Spark体系的大数据处理框架"></a>基于Spark体系的大数据处理框架</h3><p>官方: <a href="http://spark.apach.org/" target="_blank" rel="noopener">http://spark.apach.org/</a></p>
-<p>SparkCore: 数据处理框架</p>
-<p>SparkSql: 数据分析和读取</p>
-<p>SparkStreaming: 流式处理框架</p>
-<p>SparkGraphX编程</p>
-<p>SparkMLib机器学习</p>
-<p>Spark R 数据分析</p>
-<p>存储支持:</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><blockquote>
+<p>exec</p>
+</blockquote>
+<blockquote>
+<p>特殊变量</p>
+</blockquote>
 <ul>
-<li>HDFS</li>
-<li>Hive</li>
-<li>Hbase</li>
+<li>$#</li>
+<li>$*</li>
+<li>$@</li>
 </ul>
+<blockquote>
+<p>管道 |</p>
+</blockquote>
+<blockquote>
+<p>环境变量</p>
+</blockquote>
+<h3 id="引用和判断逻辑"><a href="#引用和判断逻辑" class="headerlink" title="引用和判断逻辑"></a>引用和判断逻辑</h3><blockquote>
+<p>退出状态</p>
+</blockquote>
+<ul>
+<li>echo $?</li>
+</ul>
+<blockquote>
+<p>逻辑判断</p>
+</blockquote>
+<ul>
+<li>&amp;&amp;</li>
+<li>||</li>
+</ul>
+<h3 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h3><blockquote>
+<p>算数表达式</p>
+</blockquote>
+<blockquote>
+<p>条件表达式</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line">xyxj@Master:~$ help test</span><br><span class="line">test: test [expr]</span><br><span class="line">    Evaluate conditional expression.</span><br><span class="line">    </span><br><span class="line">    Exits with a status of 0 (true) or 1 (false) depending on</span><br><span class="line">    the evaluation of EXPR.  Expressions may be unary or binary.  Unary</span><br><span class="line">    expressions are often used to examine the status of a file.  There</span><br><span class="line">    are string operators and numeric comparison operators as well.</span><br><span class="line">    </span><br><span class="line">    The behavior of test depends on the number of arguments.  Read the</span><br><span class="line">    bash manual page for the complete specification.</span><br><span class="line">    </span><br><span class="line">    File operators:</span><br><span class="line">    </span><br><span class="line">      -a FILE        True if file exists.</span><br><span class="line">      -b FILE        True if file is block special.</span><br><span class="line">      -c FILE        True if file is character special.</span><br><span class="line">      -d FILE        True if file is a directory.</span><br><span class="line">      -e FILE        True if file exists.</span><br><span class="line">      -f FILE        True if file exists and is a regular file.</span><br><span class="line">      -g FILE        True if file is set-group-id.</span><br><span class="line">      -h FILE        True if file is a symbolic link.</span><br><span class="line">      -L FILE        True if file is a symbolic link.</span><br><span class="line">      -k FILE        True if file has its `sticky&apos; bit set.</span><br><span class="line">      -p FILE        True if file is a named pipe.</span><br><span class="line">      -r FILE        True if file is readable by you.</span><br><span class="line">      -s FILE        True if file exists and is not empty.</span><br><span class="line">      -S FILE        True if file is a socket.</span><br><span class="line">      -t FD          True if FD is opened on a terminal.</span><br><span class="line">      -u FILE        True if the file is set-user-id.</span><br><span class="line">      -w FILE        True if the file is writable by you.</span><br><span class="line">      -x FILE        True if the file is executable by you.</span><br><span class="line">      -O FILE        True if the file is effectively owned by you.</span><br><span class="line">      -G FILE        True if the file is effectively owned by your group.</span><br><span class="line">      -N FILE        True if the file has been modified since it was last read.</span><br><span class="line">    </span><br><span class="line">      FILE1 -nt FILE2  True if file1 is newer than file2 (according to</span><br><span class="line">                       modification date).</span><br><span class="line">    </span><br><span class="line">      FILE1 -ot FILE2  True if file1 is older than file2.</span><br><span class="line">    </span><br><span class="line">      FILE1 -ef FILE2  True if file1 is a hard link to file2.</span><br><span class="line">    </span><br><span class="line">    All file operators except -h and -L are acting on the target of a symbolic</span><br><span class="line">    link, not on the symlink itself, if FILE is a symbolic link.</span><br><span class="line">    </span><br><span class="line">    String operators:</span><br><span class="line">    </span><br><span class="line">      -z STRING      True if string is empty.</span><br><span class="line">    </span><br><span class="line">      -n STRING</span><br><span class="line">         STRING      True if string is not empty.</span><br><span class="line">    </span><br><span class="line">      STRING1 = STRING2</span><br><span class="line">                     True if the strings are equal.</span><br><span class="line">      STRING1 != STRING2</span><br><span class="line">                     True if the strings are not equal.</span><br><span class="line">      STRING1 &lt; STRING2</span><br><span class="line">                     True if STRING1 sorts before STRING2 lexicographically.</span><br><span class="line">      STRING1 &gt; STRING2</span><br><span class="line">                     True if STRING1 sorts after STRING2 lexicographically.</span><br><span class="line">    </span><br><span class="line">    Other operators:</span><br><span class="line">    </span><br><span class="line">      -o OPTION      True if the shell option OPTION is enabled.</span><br><span class="line">      -v VAR         True if the shell variable VAR is set.</span><br><span class="line">      -R VAR         True if the shell variable VAR is set and is a name</span><br><span class="line">                     reference.</span><br><span class="line">      ! EXPR         True if expr is false.</span><br><span class="line">      EXPR1 -a EXPR2 True if both expr1 AND expr2 are true.</span><br><span class="line">      EXPR1 -o EXPR2 True if either expr1 OR expr2 is true.</span><br><span class="line">    </span><br><span class="line">      arg1 OP arg2   Arithmetic tests.  OP is one of -eq, -ne,</span><br><span class="line">                     -lt, -le, -gt, or -ge.</span><br><span class="line">    </span><br><span class="line">    Arithmetic binary operators return true if ARG1 is equal, not-equal,</span><br><span class="line">    less-than, less-than-or-equal, greater-than, or greater-than-or-equal</span><br><span class="line">    than ARG2.</span><br><span class="line">    </span><br><span class="line">    See the bash manual page bash(1) for the handling of parameters (i.e.</span><br><span class="line">    missing parameters).</span><br><span class="line">    </span><br><span class="line">    Exit Status:</span><br><span class="line">    Returns success if EXPR evaluates to true; fails if EXPR evaluates to</span><br><span class="line">    false or an invalid argument is given.</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -470,7 +488,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Bigdata/" rel="tag"># Bigdata</a>
+            <a href="/tags/Shell/" rel="tag"># Shell</a>
           
         </div>
       
@@ -483,8 +501,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/07/Scala进阶/" rel="next" title="Scala进阶">
-                <i class="fa fa-chevron-left"></i> Scala进阶
+              <a href="/2019/01/09/Linux基础/" rel="next" title="Linux基础">
+                <i class="fa fa-chevron-left"></i> Linux基础
               </a>
             
           </div>
@@ -493,8 +511,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/08/大数据之配置本地虚拟机集群/" rel="prev" title="大数据之配置本地虚拟机集群">
-                大数据之配置本地虚拟机集群 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/12/架构畅想/" rel="prev" title="架构畅想">
+                架构畅想 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -643,7 +661,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#基于hadoop2-x大数据框架"><span class="nav-number">1.</span> <span class="nav-text">基于hadoop2.x大数据框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于storm体系的实时流处理框架"><span class="nav-number">2.</span> <span class="nav-text">基于storm体系的实时流处理框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于Spark体系的大数据处理框架"><span class="nav-number">3.</span> <span class="nav-text">基于Spark体系的大数据处理框架</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Bash的理解"><span class="nav-number">1.</span> <span class="nav-text">Bash的理解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件和流重定向"><span class="nav-number">2.</span> <span class="nav-text">文件和流重定向</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变量"><span class="nav-number">3.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用和判断逻辑"><span class="nav-number">4.</span> <span class="nav-text">引用和判断逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表达式"><span class="nav-number">5.</span> <span class="nav-text">表达式</span></a></li></ol></div>
             
 
           </div>
