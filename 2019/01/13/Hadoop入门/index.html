@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="ixyxj">
 <meta property="og:description" content="Hadoop简介大数据处理技术:  储存技术:-  计算技术: 大数据处理模型  机架架构模型 文件元数据metadata 主-NameNode节点保存文件元数据: 单节点 posix DataNode和NameNode保持心跳,提交Block列表 hdfsclient和NameNode交互元数据信息 hsfsclient和DataNode交互文件block数据(c/s) datanode用文件系">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-13T07:40:55.100Z">
+<meta property="og:updated_time" content="2019-01-18T11:17:48.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hadoop入门">
 <meta name="twitter:description" content="Hadoop简介大数据处理技术:  储存技术:-  计算技术: 大数据处理模型  机架架构模型 文件元数据metadata 主-NameNode节点保存文件元数据: 单节点 posix DataNode和NameNode保持心跳,提交Block列表 hdfsclient和NameNode交互元数据信息 hsfsclient和DataNode交互文件block数据(c/s) datanode用文件系">
@@ -519,6 +519,202 @@
 </tr>
 </tbody>
 </table>
+<h3 id="Hadoop生态"><a href="#Hadoop生态" class="headerlink" title="Hadoop生态"></a>Hadoop生态</h3><ul>
+<li>Hadoop Common 底层支持, 工具, api</li>
+<li>HDFS 分布式文件系统</li>
+<li>MapReduce 并行计算框架</li>
+<li>YARN 作业调度, 集群资源管理框架</li>
+<li>相关项目:<ul>
+<li>Ambari–管理平台</li>
+<li>Avro–数据序列化系统</li>
+<li>Cassandra–键值对数据库系统</li>
+<li>Chukwa–数据收集系统</li>
+<li>Hbase–分布式数据库系统</li>
+<li>Hive–分布式数据仓库管理工具</li>
+<li>Mahout–数据分析挖掘工具库</li>
+<li>Hama–科学计算工具</li>
+<li>Pig–大规模数据分析平台</li>
+<li>Zookeeper-分布式协调系统</li>
+<li>Sqoop–关系数据转换工具</li>
+<li>Flume–日志收集工具</li>
+</ul>
+</li>
+</ul>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
+<li>修改/path/hadoop/etc/hadoop/hadoop-env.sh 添加环境变量和用户</li>
+<li>core-site.xml, hdfs-site.xml slaves</li>
+<li>格式化 hdfs namenode -format</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 查看clusterID</span><br><span class="line">[root@node00 bigdata]# cd hadoop/peseudo/dfs/name/current/</span><br><span class="line">[root@node00 current]# ls</span><br><span class="line">fsimage_0000000000000000000  fsimage_0000000000000000000.md5  seen_txid  VERSION</span><br><span class="line">[root@node00 current]# cat V*</span><br><span class="line"><span class="meta">#</span>Sun Jan 13 17:55:42 CST 2019</span><br><span class="line">namespaceID=1750411322</span><br><span class="line">clusterID=CID-613d7892-7713-4332-a935-83c33f130f01</span><br><span class="line">cTime=1547373342839</span><br><span class="line">storageType=NAME_NODE</span><br><span class="line">blockpoolID=BP-23152900-192.168.80.138-1547373342839</span><br><span class="line">layoutVersion=-64</span><br><span class="line">[root@node00 current]#</span><br></pre></td></tr></table></figure>
+<p>如果datanode启动失败:</p>
+<ul>
+<li>可能就是clusterID不一致,将name下VERSION的clusterID复制到data下的</li>
+</ul>
+<h3 id="高可用分布式配置"><a href="#高可用分布式配置" class="headerlink" title="高可用分布式配置"></a>高可用分布式配置</h3><p>项目部署图</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>NN-1</th>
+<th>NN-2</th>
+<th>DN</th>
+<th>ZK</th>
+<th>ZKFC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>node01</td>
+<td>*</td>
+<td></td>
+<td></td>
+<td>*</td>
+<td>*</td>
+</tr>
+<tr>
+<td>node02</td>
+<td></td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+<td>*</td>
+</tr>
+<tr>
+<td>node03</td>
+<td></td>
+<td></td>
+<td>*</td>
+<td></td>
+<td>*</td>
+</tr>
+<tr>
+<td>node04</td>
+<td></td>
+<td></td>
+<td>*</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>将/opt/hadoop/hadoop/etc/hadoop 备份 hadoop-full并进入hadoop</li>
+<li>配置hadoop-env.sh</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/opt/java8</span><br><span class="line">export HDFS_NAMENODE_USER=root</span><br><span class="line">export HDFS_DATANODE_USER=root</span><br><span class="line">export HDFS_SECONDARYNAMENODE_USER=root</span><br><span class="line">export HDFS_ZKFC_USER=root</span><br><span class="line">export HDFS_JOURNALNODE_USER=root</span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置core-site.xml</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>fs.defaultFS<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>hdfs://mycluster<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.tmp.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>/var/bigdata/hadoop/ha<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>hadoop.http.staticuser.user<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>root<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">name</span>&gt;</span>ha.zookeeper.quorum<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">value</span>&gt;</span>node02:2181,node03:2181,node04:2181<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>配置hdfs-site.xml</li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.replication<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>1<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.nameservices<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>mycluster<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.ha.namenodes.mycluster<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>nn1,nn2<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.rpc-address.mycluster.nn1<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>node01:8020<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.rpc-address.mycluster.nn2<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>node02:8020<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.http-address.mycluster.nn1<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>node01:9870<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.http-address.mycluster.nn2<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>node02:9870<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.namenode.shared.edits.dir<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">value</span>&gt;</span>file:///mnt/filer1/dfs/ha-name-dir-shared<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.client.failover.proxy.provider.mycluster<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">value</span>&gt;</span>org.apache.hadoop.hdfs.server.namenode.ha.ConfiguredFailoverProxyProvider<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.ha.fencing.methods<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">value</span>&gt;</span>sshfence<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.ha.fencing.ssh.private-key-files<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">value</span>&gt;</span>/root/.ssh/id_rsa<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">property</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">name</span>&gt;</span>dfs.ha.automatic-failover.enabled<span class="tag">&lt;/<span class="name">name</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">value</span>&gt;</span>true<span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>zookeeper </p>
+<ul>
+<li><p>下载地址:<a href="https://www-us.apache.org/dist/zookeeper/stable/" target="_blank" rel="noopener">https://www-us.apache.org/dist/zookeeper/stable/</a></p>
+</li>
+<li><p>解压配置环境变量</p>
+</li>
+<li><p>更改/path/zookeeper/conf,将cfg_sample保存为cfg</p>
+<ul>
+<li>更改dataDir=/var/bitdata/zk</li>
+<li>末尾追加:</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">server.1=node02:2888:3888</span><br><span class="line">server.2=node03:2888:3888</span><br><span class="line">server.3=node04:2888:3888</span><br></pre></td></tr></table></figure>
+<ul>
+<li>more</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /var/bigdata/zk</span><br><span class="line">echo 1 &gt; /var/bigdata/zk/myid</span><br></pre></td></tr></table></figure>
+<ul>
+<li>run</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zkServer.sh start/stop/status</span><br></pre></td></tr></table></figure>
+<ul>
+<li>总结<ul>
+<li>选取机制: 设置的myid编号越大越能成为从节点</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>启动journalnode</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hdfs -daemon start/stop journalnode</span><br></pre></td></tr></table></figure>
+<ul>
+<li>同步standby</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#启动node01的namenode</span><br><span class="line">#同步node02的namenode</span><br></pre></td></tr></table></figure>
+<h3 id="MapReduce介绍"><a href="#MapReduce介绍" class="headerlink" title="MapReduce介绍"></a>MapReduce介绍</h3><p>MR语义:</p>
+<blockquote>
+<p>数据控制Map数量, 人为控制Reduce数量</p>
+</blockquote>
+<p>split, map, reduce, group, partion的关系:</p>
+<blockquote>
+<p>Map task 和 Reduce task的工作</p>
+</blockquote>
+<p>shuffle和sort的过程描述:</p>
+<h3 id="Yarn介绍"><a href="#Yarn介绍" class="headerlink" title="Yarn介绍"></a>Yarn介绍</h3><p>什么是 Jobtracker?</p>
+<ul>
+<li>MRv2: On Yarn<ul>
+<li>Resourcemanager</li>
+<li>NodeManager</li>
+<li>Container</li>
+</ul>
+</li>
+<li>MR:</li>
+<li>Client:<ul>
+<li>RM-Client:请求资源</li>
+<li>AM-Client: 和AM交互</li>
+</ul>
+</li>
+</ul>
+<h3 id="配置Yarn"><a href="#配置Yarn" class="headerlink" title="配置Yarn"></a>配置Yarn</h3><p>官方例子: </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@node0 hadoop]# ll -h share/hadoop/mapreduce/</span><br><span class="line">总用量 5.0M</span><br><span class="line">-rw-r--r--. 1 1001 1001 553K 9月  10 11:58 hadoop-mapreduce-client-app-2.8.5.jar</span><br><span class="line">-rw-r--r--. 1 1001 1001 765K 9月  10 11:58 hadoop-mapreduce-client-common-2.8.5.jar</span><br><span class="line">-rw-r--r--. 1 1001 1001 1.5M 9月  10 11:58 hadoop-mapreduce-client-core-2.8.5.jar</span><br><span class="line">-rw-r--r--. 1 1001 1001 190K 9月  10 11:58 hadoop-mapreduce-client-hs-2.8.5.jar</span><br><span class="line">-rw-r--r--. 1 1001 1001  31K 9月  10 11:58 hadoop-mapreduce-client-hs-plugins-2.8.5.jar</span><br><span class="line">-rw-r--r--. 1 1001 1001  66K 9月  10 11:58 hadoop-mapreduce-client-jobclient-2.8.5.jar</span><br><span class="line">-rw-r--r--. 1 1001 1001 1.6M 9月  10 11:58 hadoop-mapreduce-client-jobclient-2.8.5-tests.jar</span><br><span class="line">-rw-r--r--. 1 1001 1001  75K 9月  10 11:58 hadoop-mapreduce-client-shuffle-2.8.5.jar</span><br><span class="line">-rw-r--r--. 1 1001 1001 295K 9月  10 11:58 hadoop-mapreduce-examples-2.8.5.jar</span><br><span class="line">drwxr-xr-x. 2 1001 1001 4.0K 9月  10 11:58 jdiff</span><br><span class="line">drwxr-xr-x. 2 1001 1001 4.0K 9月  10 11:58 lib</span><br><span class="line">drwxr-xr-x. 2 1001 1001   30 9月  10 11:58 lib-examples</span><br><span class="line">drwxr-xr-x. 2 1001 1001 4.0K 9月  10 11:58 sources</span><br></pre></td></tr></table></figure>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><blockquote>
+<p>晒选活动</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">2018-10-01	13</span><br><span class="line">2018-10-10	23</span><br><span class="line">2018-10-11	24</span><br><span class="line">2018-11-01	13</span><br><span class="line">2018-11-10	23</span><br><span class="line">2018-12-01	13</span><br><span class="line">2018-12-10	23</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>PageRank计算</p>
+</blockquote>
+<ul>
+<li><p>原理:</p>
+<p>先有权重值, 初始权重都相同</p>
+<ul>
+<li>入链==投票</li>
+<li>入链数量</li>
+<li>入链质量, 质量高的入链,投票就重要</li>
+</ul>
+<p>站在互联网的角度:</p>
+<ul>
+<li>只出不入:PR为0</li>
+<li>只入不出: PR很高</li>
+<li>直接访问网页</li>
+</ul>
+<p>阻尼系数:d=0.86</p>
+</li>
+</ul>
+<p>相同的key为一组,</p>
+<p>数据:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A	B	D</span><br><span class="line">B	C</span><br><span class="line">C	A	B</span><br><span class="line">D	B	C</span><br></pre></td></tr></table></figure>
+<p>处理:</p>
+<p>初始值赋值为1,</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;D,1/2&gt;</span><br><span class="line">&lt;D,1/2&gt;</span><br><span class="line">&lt;B,1/2&gt;</span><br></pre></td></tr></table></figure>
+<p>页面关系数据:</p>
+<hr>
+<blockquote>
+<p>TF/IDF算法</p>
+</blockquote>
+<ul>
+<li>词频(term frequency) : 通俗就是词频</li>
+<li>逆向文件频率(inverse document frequency,IDF)是一个词语普遍</li>
+</ul>
+<blockquote>
+<p>电商推荐</p>
+</blockquote>
 
       
     </div>
@@ -587,6 +783,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/18/Hive入门/" rel="prev" title="Hive入门">
+                Hive入门 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -665,7 +865,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -678,7 +878,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -734,7 +934,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop简介"><span class="nav-number">1.</span> <span class="nav-text">Hadoop简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机架"><span class="nav-number">2.</span> <span class="nav-text">机架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#架构模型"><span class="nav-number">3.</span> <span class="nav-text">架构模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop版本介绍"><span class="nav-number">4.</span> <span class="nav-text">Hadoop版本介绍</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop简介"><span class="nav-number">1.</span> <span class="nav-text">Hadoop简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机架"><span class="nav-number">2.</span> <span class="nav-text">机架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#架构模型"><span class="nav-number">3.</span> <span class="nav-text">架构模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop版本介绍"><span class="nav-number">4.</span> <span class="nav-text">Hadoop版本介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hadoop生态"><span class="nav-number">5.</span> <span class="nav-text">Hadoop生态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">6.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高可用分布式配置"><span class="nav-number">7.</span> <span class="nav-text">高可用分布式配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MapReduce介绍"><span class="nav-number">8.</span> <span class="nav-text">MapReduce介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Yarn介绍"><span class="nav-number">9.</span> <span class="nav-text">Yarn介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Yarn"><span class="nav-number">10.</span> <span class="nav-text">配置Yarn</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例"><span class="nav-number">11.</span> <span class="nav-text">实例</span></a></li></ol></div>
             
 
           </div>

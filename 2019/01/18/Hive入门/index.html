@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hive,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ixyxj" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="Hive简介 官网: http://hive.apache.org/ 原因: 使用SQL语句, 对非Java开发者对hdfs的数据做mapreduce操作 数据仓库 数据仓库和数据库的区别: 对数据进行分析和交互式访问数据   解释器, 编译器, 优化器 元数据存储在关系型数据库中  配置 下载地址：http://mirrors.shuosc.org/apache/hive/hive-2.3.3/">
+<meta name="keywords" content="Hive">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hive入门">
+<meta property="og:url" content="https://ixyxj.github.io/2019/01/18/Hive入门/index.html">
+<meta property="og:site_name" content="ixyxj">
+<meta property="og:description" content="Hive简介 官网: http://hive.apache.org/ 原因: 使用SQL语句, 对非Java开发者对hdfs的数据做mapreduce操作 数据仓库 数据仓库和数据库的区别: 对数据进行分析和交互式访问数据   解释器, 编译器, 优化器 元数据存储在关系型数据库中  配置 下载地址：http://mirrors.shuosc.org/apache/hive/hive-2.3.3/">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-01-22T01:49:55.406Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hive入门">
+<meta name="twitter:description" content="Hive简介 官网: http://hive.apache.org/ 原因: 使用SQL语句, 对非Java开发者对hdfs的数据做mapreduce操作 数据仓库 数据仓库和数据库的区别: 对数据进行分析和交互式访问数据   解释器, 编译器, 优化器 元数据存储在关系型数据库中  配置 下载地址：http://mirrors.shuosc.org/apache/hive/hive-2.3.3/">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://ixyxj.github.io/2019/01/18/Hive入门/">
+
+
+
+
+
+  <title>Hive入门 | ixyxj</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ixyxj</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">one people and a city</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ixyxj.github.io/2019/01/18/Hive入门/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xyxj">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar_default.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ixyxj">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Hive入门</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-18T19:18:22+08:00">
+                2019-01-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Hive简介"><a href="#Hive简介" class="headerlink" title="Hive简介"></a>Hive简介</h3><ul>
+<li>官网: <a href="http://hive.apache.org/" target="_blank" rel="noopener">http://hive.apache.org/</a></li>
+<li>原因: 使用SQL语句, 对非Java开发者对hdfs的数据做mapreduce操作</li>
+<li>数据仓库<ul>
+<li>数据仓库和数据库的区别: 对数据进行分析和交互式访问数据</li>
+</ul>
+</li>
+<li>解释器, 编译器, 优化器</li>
+<li>元数据存储在关系型数据库中</li>
+</ul>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><ul>
+<li>下载地址：<a href="http://mirrors.shuosc.org/apache/hive/hive-2.3.3/" target="_blank" rel="noopener">http://mirrors.shuosc.org/apache/hive/hive-2.3.3/</a></li>
+<li>解压到/opt/hadoop/hive2/下环境变量</li>
+<li>设置conf</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">mv hive-default.xml.template hive-site.xml</span><br><span class="line">mv hive-env.sh.template hive-env.sh</span><br><span class="line"><span class="meta">#</span> 配置</span><br><span class="line">&lt;property&gt;  </span><br><span class="line">  &lt;name&gt;hive.metastore.warehouse.dir&lt;/name&gt;  </span><br><span class="line">  &lt;value&gt;/user/hive_remote/warehouse&lt;/value&gt;  </span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;  </span><br><span class="line">  &lt;name&gt;hive.metastore.local&lt;/name&gt;  </span><br><span class="line">  &lt;value&gt;false&lt;/value&gt;  </span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;  </span><br><span class="line">  &lt;name&gt;javax.jdo.option.ConnectionURL&lt;/name&gt;  </span><br><span class="line">  &lt;value&gt;jdbc:mysql://node0/hive_remote?createDatabaseIfNotExist=true&lt;/value&gt;  </span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;  </span><br><span class="line">  &lt;name&gt;javax.jdo.option.ConnectionDriverName&lt;/name&gt;  </span><br><span class="line">  &lt;value&gt;com.mysql.jdbc.Driver&lt;/value&gt;  </span><br><span class="line">&lt;/property&gt; </span><br><span class="line">&lt;property&gt; </span><br><span class="line">  &lt;name&gt;javax.jdo.option.ConnectionUserName&lt;/name&gt;  </span><br><span class="line">  &lt;value&gt;root&lt;/value&gt;  </span><br><span class="line">&lt;/property&gt;  </span><br><span class="line">&lt;property&gt;  </span><br><span class="line"> &lt;name&gt;javax.jdo.option.ConnectionPassword&lt;/name&gt;  </span><br><span class="line"> &lt;value&gt;123&lt;/value&gt;  </span><br><span class="line">&lt;/property&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">  &lt;name&gt;hive.metastore.uris&lt;/name&gt;  </span><br><span class="line">  &lt;value&gt;thrift://node0:9083&lt;/value&gt;  </span><br><span class="line">&lt;/property&gt;</span><br></pre></td></tr></table></figure>
+<p>修改mysql权限：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">select @@validate_password_policy;</span><br><span class="line">SHOW VARIABLES LIKE &apos;validate_password%&apos;;</span><br><span class="line"># 设置密码检查</span><br><span class="line">set global validate_password_policy=0;</span><br><span class="line">set global validate_password_mixed_case_count=0;</span><br><span class="line">set global validate_password_number_count=3;</span><br><span class="line">set global validate_password_special_char_count=0;</span><br><span class="line">set global validate_password_length=3;</span><br><span class="line"></span><br><span class="line">GRANT ALL PRIVILEGES ON *.* TO &apos;root&apos;@&apos;%&apos; IDENTIFIED BY &apos;123&apos; WITH GRANT OPTION;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
+<p>启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&gt; schematool -dbType mysql -initSchema</span><br><span class="line">Metastore connection URL:	 jdbc:mysql://node0/hive_remote?createDatabaseIfNotExist=true&amp;useSSL=false</span><br><span class="line">Metastore Connection Driver :	 com.mysql.jdbc.Driver</span><br><span class="line">Metastore connection User:	 root</span><br><span class="line">Starting metastore schema initialization to 2.3.0</span><br><span class="line">Initialization script hive-schema-2.3.0.mysql.sql</span><br><span class="line">Initialization script completed</span><br><span class="line">schemaTool completed</span><br><span class="line"></span><br><span class="line"># 启动元数据</span><br><span class="line">hive –service metastore -hiveconf hive.root.logger=DEBUG,console &amp; </span><br><span class="line">&amp; echo success</span><br><span class="line"></span><br><span class="line">&gt; hive</span><br></pre></td></tr></table></figure>
+<p>问题：ssl连接在jdbc后加上<strong>&amp;\amp;</strong></p>
+<ul>
+<li>hdfs上新建hive目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hadoop fs -mkdir -p /user/hive/warehouse</span><br><span class="line">hadoop fs -mkdir -p /user/hive/tmp</span><br><span class="line">hadoop fs -mkdir -p /user/hive/log</span><br><span class="line">hadoop fs -chmod -R 777 /user/hive/warehouse</span><br><span class="line">hadoop fs -chmod -R 777 /user/hive/tmp</span><br><span class="line">hadoop fs -chmod -R 777 /user/hive/log</span><br></pre></td></tr></table></figure>
+<p>内部表和外部表的区别:</p>
+<ul>
+<li>创建时需要定制目录</li>
+<li>删除内部表会将表结构和元数据全部删除</li>
+<li>外部表只删除表结构,不删除元数据.</li>
+</ul>
+<h3 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h3><ul>
+<li>分区字段不能在表的列中</li>
+</ul>
+<blockquote>
+<p>怎么分区?</p>
+</blockquote>
+<ul>
+<li>分区规则</li>
+<li>增加分区-实质就是加目录<ul>
+<li>添加分区的时候必须在现有分区的基础之上</li>
+<li>删除分区的时候, 会将所有的存在的分区都删除.</li>
+</ul>
+</li>
+</ul>
+<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><p>官方教程： <a href="https://cwiki.apache.org/confluence/display/Hive/LanguageManual" target="_blank" rel="noopener">https://cwiki.apache.org/confluence/display/Hive/LanguageManual</a></p>
+<blockquote>
+<p>create</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">CREATE (DATABASE|SCHEMA) [IF NOT EXISTS] database_name</span><br><span class="line">  [COMMENT database_comment]</span><br><span class="line">  [LOCATION hdfs_path]</span><br><span class="line">  [WITH DBPROPERTIES (property_name=property_value, ...)];</span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">CREATE DATABASE IF NOT EXISTS hive;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>delete</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DROP (DATABASE|SCHEMA) [IF EXISTS] database_name [RESTRICT|CASCADE];</span><br><span class="line"></span><br><span class="line">DROP DATABASE IF EXISTS hive;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>加数据</p>
+</blockquote>
+<ul>
+<li>insert</li>
+<li>load data</li>
+<li>from table_name insert 语法</li>
+</ul>
+<h3 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h3><blockquote>
+<p>beeline</p>
+</blockquote>
+<p>连接方式:</p>
+<ul>
+<li>beeline /  !connect jdbc:hive2://node0:10000/default -n root 123</li>
+</ul>
+<p>退出</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span> !quit</span><br></pre></td></tr></table></figure>
+<h3 id="Hive函数"><a href="#Hive函数" class="headerlink" title="Hive函数"></a>Hive函数</h3><p>自定义函数:</p>
+<ul>
+<li>继承UDF</li>
+<li></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="xyxj 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="xyxj 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Hive/" rel="tag"># Hive</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/01/13/Hadoop入门/" rel="next" title="Hadoop入门">
+                <i class="fa fa-chevron-left"></i> Hadoop入门
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/23/HBase入门/" rel="prev" title="HBase入门">
+                HBase入门 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar_default.png" alt="xyxj">
+            
+              <p class="site-author-name" itemprop="name">xyxj</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ixyxj" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:xyxjun@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive简介"><span class="nav-number">1.</span> <span class="nav-text">Hive简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分区"><span class="nav-number">3.</span> <span class="nav-text">分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作"><span class="nav-number">4.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#工具"><span class="nav-number">5.</span> <span class="nav-text">工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hive函数"><span class="nav-number">6.</span> <span class="nav-text">Hive函数</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">xyxj</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count"></span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

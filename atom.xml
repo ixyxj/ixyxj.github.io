@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-01-13T07:40:55.100Z</updated>
+  <updated>2019-01-30T08:45:14.449Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -17,11 +17,164 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CentOS构建Android编译环境</title>
+    <link href="https://ixyxj.github.io/2019/01/30/CentOS%E6%9E%84%E5%BB%BAAndroid%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
+    <id>https://ixyxj.github.io/2019/01/30/CentOS构建Android编译环境/</id>
+    <published>2019-01-30T06:54:35.000Z</published>
+    <updated>2019-01-30T08:45:14.449Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;安装JDK&quot;&gt;&lt;a href=&quot;#安装JDK&quot; class=&quot;headerlink&quot; title=&quot;安装JDK&quot;&gt;&lt;/a&gt;安装JDK&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="https://ixyxj.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Help</title>
+    <link href="https://ixyxj.github.io/2019/01/26/Help/"/>
+    <id>https://ixyxj.github.io/2019/01/26/Help/</id>
+    <published>2019-01-26T12:15:40.000Z</published>
+    <updated>2019-01-26T12:19:30.503Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;设置淘宝npm镜像&quot;&gt;&lt;a href=&quot;#设置淘宝npm镜像&quot; class=&quot;headerlink&quot; title=&quot;设置淘宝npm镜像&quot;&gt;&lt;/a&gt;设置淘宝npm镜像&lt;/h3&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="develop" scheme="https://ixyxj.github.io/tags/develop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FFmpeg命令行大全</title>
+    <link href="https://ixyxj.github.io/2019/01/25/FFmpeg%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8/"/>
+    <id>https://ixyxj.github.io/2019/01/25/FFmpeg命令行大全/</id>
+    <published>2019-01-25T12:03:52.000Z</published>
+    <updated>2019-01-25T12:38:16.015Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt; 添加水印&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;去水印&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ffmpeg" scheme="https://ixyxj.github.io/tags/ffmpeg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Elasticsearch入门</title>
+    <link href="https://ixyxj.github.io/2019/01/24/Elasticsearch%E5%85%A5%E9%97%A8/"/>
+    <id>https://ixyxj.github.io/2019/01/24/Elasticsearch入门/</id>
+    <published>2019-01-24T15:01:57.000Z</published>
+    <updated>2019-01-26T16:33:49.263Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Elasticsearch介绍&quot;&gt;&lt;a href=&quot;#Elasticsearch介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Search" scheme="https://ixyxj.github.io/tags/Search/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HBase入门</title>
+    <link href="https://ixyxj.github.io/2019/01/23/HBase%E5%85%A5%E9%97%A8/"/>
+    <id>https://ixyxj.github.io/2019/01/23/HBase入门/</id>
+    <published>2019-01-23T10:24:24.000Z</published>
+    <updated>2019-01-24T15:02:11.620Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;HBase简介&quot;&gt;&lt;a href=&quot;#HBase简介&quot; class=&quot;headerlink&quot; title=&quot;HBase简介&quot;&gt;&lt;/a&gt;HBase简介&lt;/h3&gt;&lt;p&gt;略&lt;/p&gt;
+&lt;h3 id=&quot;配置&quot;&gt;&lt;a href=&quot;#配置&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="HBase" scheme="https://ixyxj.github.io/tags/HBase/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hive入门</title>
+    <link href="https://ixyxj.github.io/2019/01/18/Hive%E5%85%A5%E9%97%A8/"/>
+    <id>https://ixyxj.github.io/2019/01/18/Hive入门/</id>
+    <published>2019-01-18T11:18:22.000Z</published>
+    <updated>2019-01-22T01:49:55.406Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Hive简介&quot;&gt;&lt;a href=&quot;#Hive简介&quot; class=&quot;headerlink&quot; title=&quot;Hive简介&quot;&gt;&lt;/a&gt;Hive简介&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;官网: &lt;a href=&quot;http://hive.apache.org/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Hive" scheme="https://ixyxj.github.io/tags/Hive/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hadoop入门</title>
     <link href="https://ixyxj.github.io/2019/01/13/Hadoop%E5%85%A5%E9%97%A8/"/>
     <id>https://ixyxj.github.io/2019/01/13/Hadoop入门/</id>
     <published>2019-01-13T04:23:51.000Z</published>
-    <updated>2019-01-13T07:40:55.100Z</updated>
+    <updated>2019-01-18T11:17:48.549Z</updated>
     
     <summary type="html">
     
@@ -98,7 +251,7 @@
     <link href="https://ixyxj.github.io/2019/01/09/Linux%E5%9F%BA%E7%A1%80/"/>
     <id>https://ixyxj.github.io/2019/01/09/Linux基础/</id>
     <published>2019-01-09T14:23:53.000Z</published>
-    <updated>2019-01-13T08:04:22.149Z</updated>
+    <updated>2019-01-26T12:14:11.413Z</updated>
     
     <summary type="html">
     
@@ -106,8 +259,7 @@
       
         
         
-          &lt;h3 id=&quot;解压缩&quot;&gt;&lt;a href=&quot;#解压缩&quot; class=&quot;headerlink&quot; title=&quot;解压缩&quot;&gt;&lt;/a&gt;解压缩&lt;/h3&gt;&lt;p&gt;tar 解压缩命令 :&lt;/p&gt;
-&lt;p&gt;c:
+          &lt;h3 id=&quot;ssh&quot;&gt;&lt;a href=&quot;#ssh&quot; class=&quot;headerlink&quot; title=&quot;ssh&quot;&gt;&lt;/a&gt;ssh&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
         
       
     
@@ -123,7 +275,7 @@
     <link href="https://ixyxj.github.io/2019/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8B%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9B%86%E7%BE%A4/"/>
     <id>https://ixyxj.github.io/2019/01/08/大数据之配置本地虚拟机集群/</id>
     <published>2019-01-08T07:11:25.000Z</published>
-    <updated>2019-01-11T08:29:51.140Z</updated>
+    <updated>2019-01-14T09:13:23.039Z</updated>
     
     <summary type="html">
     
@@ -293,7 +445,7 @@
     <link href="https://ixyxj.github.io/2018/12/15/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9C%A8GithubPages/"/>
     <id>https://ixyxj.github.io/2018/12/15/Hexo搭建博客在GithubPages/</id>
     <published>2018-12-15T13:04:15.000Z</published>
-    <updated>2018-12-26T03:36:21.487Z</updated>
+    <updated>2019-01-19T17:26:05.974Z</updated>
     
     <summary type="html">
     
@@ -317,7 +469,7 @@
     <link href="https://ixyxj.github.io/2018/12/15/SQL%E5%85%A5%E9%97%A8/"/>
     <id>https://ixyxj.github.io/2018/12/15/SQL入门/</id>
     <published>2018-12-15T12:34:12.000Z</published>
-    <updated>2018-12-26T03:35:16.948Z</updated>
+    <updated>2019-01-20T10:07:21.849Z</updated>
     
     <summary type="html">
     

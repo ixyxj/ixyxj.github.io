@@ -109,18 +109,18 @@
 
 
 
-<meta name="description" content="解压缩tar 解压缩命令 : c: 建立压缩档案-x：解压-t：查看内容-r：向压缩归档文件末尾追加文件-u：更新原压缩包中的文件这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。-z：有gzip属性的-j：有bz2属性的-Z：有compress属性的-v：显示所有过程-O：将文件解开到标准输出下面的参数-f是必须的-f">
+<meta name="description" content="ssh1cat ~/.ssh/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys 安装依赖组123[root@node0 ~]# yum grouplist[root@node0 ~]# yum groupinfo [root@node0 ~]# yum groupinstall 开发工具 端口占用  netstat -anp|grep 80   解压缩tar 解">
 <meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux基础">
 <meta property="og:url" content="https://ixyxj.github.io/2019/01/09/Linux基础/index.html">
 <meta property="og:site_name" content="ixyxj">
-<meta property="og:description" content="解压缩tar 解压缩命令 : c: 建立压缩档案-x：解压-t：查看内容-r：向压缩归档文件末尾追加文件-u：更新原压缩包中的文件这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。-z：有gzip属性的-j：有bz2属性的-Z：有compress属性的-v：显示所有过程-O：将文件解开到标准输出下面的参数-f是必须的-f">
+<meta property="og:description" content="ssh1cat ~/.ssh/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys 安装依赖组123[root@node0 ~]# yum grouplist[root@node0 ~]# yum groupinfo [root@node0 ~]# yum groupinstall 开发工具 端口占用  netstat -anp|grep 80   解压缩tar 解">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-13T08:04:22.149Z">
+<meta property="og:updated_time" content="2019-01-26T12:14:11.413Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux基础">
-<meta name="twitter:description" content="解压缩tar 解压缩命令 : c: 建立压缩档案-x：解压-t：查看内容-r：向压缩归档文件末尾追加文件-u：更新原压缩包中的文件这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。-z：有gzip属性的-j：有bz2属性的-Z：有compress属性的-v：显示所有过程-O：将文件解开到标准输出下面的参数-f是必须的-f">
+<meta name="twitter:description" content="ssh1cat ~/.ssh/id_rsa.pub &amp;gt;&amp;gt; ~/.ssh/authorized_keys 安装依赖组123[root@node0 ~]# yum grouplist[root@node0 ~]# yum groupinfo [root@node0 ~]# yum groupinstall 开发工具 端口占用  netstat -anp|grep 80   解压缩tar 解">
 
 
 
@@ -399,12 +399,18 @@
       
 
       
-        <h3 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h3><p>tar 解压缩命令 :</p>
+        <h3 id="ssh"><a href="#ssh" class="headerlink" title="ssh"></a>ssh</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure>
+<h3 id="安装依赖组"><a href="#安装依赖组" class="headerlink" title="安装依赖组"></a>安装依赖组</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@node0 ~]# yum grouplist</span><br><span class="line">[root@node0 ~]# yum groupinfo </span><br><span class="line">[root@node0 ~]# yum groupinstall 开发工具</span><br></pre></td></tr></table></figure>
+<h3 id="端口占用"><a href="#端口占用" class="headerlink" title="端口占用"></a>端口占用</h3><blockquote>
+<p> netstat -anp|grep 80 </p>
+</blockquote>
+<h3 id="解压缩"><a href="#解压缩" class="headerlink" title="解压缩"></a>解压缩</h3><p>tar 解压缩命令 :</p>
 <p>c: 建立压缩档案<br>-x：解压<br>-t：查看内容<br>-r：向压缩归档文件末尾追加文件<br>-u：更新原压缩包中的文件<br>这五个是独立的命令，压缩解压都要用到其中一个，可以和别的命令连用但只能用其中一个。下面的参数是根据需要在压缩或解压档案时可选的。<br>-z：有gzip属性的<br>-j：有bz2属性的<br>-Z：有compress属性的<br>-v：显示所有过程<br>-O：将文件解开到标准输出<br>下面的参数-f是必须的<br>-f: 使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。</p>
 <h3 id="更改主机名"><a href="#更改主机名" class="headerlink" title="更改主机名"></a>更改主机名</h3><p>查看</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">xyxj@u18_data1:~$ hostnamectl</span><br><span class="line">   Static hostname: Master		#静态主机名</span><br><span class="line">Transient hostname: u18_data1   #临时主机名</span><br><span class="line">         Icon name: computer-vm</span><br><span class="line">           Chassis: vm</span><br><span class="line">        Machine ID: 67f22187487a4bbd893048a9f7b4bb13</span><br><span class="line">           Boot ID: ce03c7b8874e4b75ab0bb71c886fd3fe</span><br><span class="line">    Virtualization: vmware</span><br><span class="line">  Operating System: Ubuntu 18.10</span><br><span class="line">            Kernel: Linux 4.18.0-13-generic</span><br><span class="line">      Architecture: x86-64</span><br></pre></td></tr></table></figure>
 <p>操作</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">xyxj@u18_data1:~$ sudo hostname Master-name		#更改临时主机名</span><br><span class="line">xyxj@u18_data1:~$ sudo hostnamectl set-hostname Master #更改静态主机名</span><br></pre></td></tr></table></figure>
+<h3 id="更改CentOS默认的yum源"><a href="#更改CentOS默认的yum源" class="headerlink" title="更改CentOS默认的yum源"></a>更改CentOS默认的yum源</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.bak</span><br><span class="line"><span class="meta">#</span> centos-7</span><br><span class="line">wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> cache</span><br><span class="line"> yum makecache</span><br></pre></td></tr></table></figure>
 <h3 id="高并发和负载均衡"><a href="#高并发和负载均衡" class="headerlink" title="高并发和负载均衡"></a>高并发和负载均衡</h3><p>名词:</p>
 <ul>
 <li>VIP: 虚拟服务器地址</li>
@@ -645,7 +651,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -658,7 +664,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -714,7 +720,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#解压缩"><span class="nav-number">1.</span> <span class="nav-text">解压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改主机名"><span class="nav-number">2.</span> <span class="nav-text">更改主机名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高并发和负载均衡"><span class="nav-number">3.</span> <span class="nav-text">高并发和负载均衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置负载均衡"><span class="nav-number">4.</span> <span class="nav-text">配置负载均衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Keepalived"><span class="nav-number">5.</span> <span class="nav-text">Keepalived</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除多余内核"><span class="nav-number">6.</span> <span class="nav-text">删除多余内核</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ssh"><span class="nav-number">1.</span> <span class="nav-text">ssh</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装依赖组"><span class="nav-number">2.</span> <span class="nav-text">安装依赖组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#端口占用"><span class="nav-number">3.</span> <span class="nav-text">端口占用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解压缩"><span class="nav-number">4.</span> <span class="nav-text">解压缩</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改主机名"><span class="nav-number">5.</span> <span class="nav-text">更改主机名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更改CentOS默认的yum源"><span class="nav-number">6.</span> <span class="nav-text">更改CentOS默认的yum源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高并发和负载均衡"><span class="nav-number">7.</span> <span class="nav-text">高并发和负载均衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置负载均衡"><span class="nav-number">8.</span> <span class="nav-text">配置负载均衡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Keepalived"><span class="nav-number">9.</span> <span class="nav-text">Keepalived</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除多余内核"><span class="nav-number">10.</span> <span class="nav-text">删除多余内核</span></a></li></ol></div>
             
 
           </div>
