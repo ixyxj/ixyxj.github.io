@@ -99,6 +99,8 @@
 
 
 
+  
+
 
   <link rel="alternate" href="/atom.xml" title="ixyxj" type="application/atom+xml">
 
@@ -115,7 +117,7 @@
 <meta property="og:site_name" content="ixyxj">
 <meta property="og:description" content="安装JDK 官方下载 下载并解压  123&amp;gt; wget --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c2695">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-30T08:45:14.449Z">
+<meta property="og:updated_time" content="2019-01-30T08:58:41.637Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CentOS构建Android编译环境">
 <meta name="twitter:description" content="安装JDK 官方下载 下载并解压  123&amp;gt; wget --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c2695">
@@ -422,6 +424,18 @@
 <li>安装platform-tools</li>
 </ul>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">touch ~/.android/repositories.cfg</span><br><span class="line">sdkmanager --update</span><br><span class="line">sdkmanager --licenses</span><br><span class="line">sdkmanager "platforms;android-28"</span><br><span class="line">[=======================================] 100% Unzipping... android-9/framework.</span><br><span class="line">sdkmanager "platform-tools"</span><br><span class="line">[=======================================] 100% Unzipping... platform-tools/systr</span><br></pre></td></tr></table></figure>
+<h3 id="NDK配置"><a href="#NDK配置" class="headerlink" title="NDK配置"></a>NDK配置</h3><ul>
+<li>版本</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">https://dl.google.com/android/repository/android-ndk-r13b-linux-x86_64.zip</span><br><span class="line">https://dl.google.com/android/repository/android-ndk-r13-linux-x86_64.zip</span><br><span class="line">http://dl.google.com/android/repository/android-ndk-r12b-linux-x86_64.zip</span><br><span class="line">http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86.bin</span><br><span class="line">http://dl.google.com/android/ndk/android-ndk-r10e-linux-x86_64.bin</span><br><span class="line">http://dl.google.com/android/ndk/android-ndk64-r10-linux-x86.tar.bz2</span><br><span class="line">http://dl.google.com/android/ndk/android-ndk64-r10-linux-x86_64.tar.bz2</span><br><span class="line">http://dl.google.com/android/ndk/android-ndk64-r10-linux-x86.tar.bz2</span><br><span class="line">http://dl.google.com/android/ndk/android-ndk64-r10-linux-x86_64.tar.bz2</span><br></pre></td></tr></table></figure>
+<ul>
+<li>安装</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget http://dl.google.com/android/repository/android-ndk-r12b-linux-x86_64.zip</span><br><span class="line">unzip android-ndk-r12b-linux-x86_64</span><br><span class="line">mv android-ndk-r12b /opt/android/ndk/</span><br></pre></td></tr></table></figure>
+<ul>
+<li>环境变量</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> android ndk</span><br><span class="line">export NDK_HOME=/opt/android/ndk/android-ndk-12b</span><br><span class="line">export PATH=$PATH:$NDK_HOME/bin</span><br></pre></td></tr></table></figure>
 <h3 id="其他工具安装"><a href="#其他工具安装" class="headerlink" title="其他工具安装"></a>其他工具安装</h3><ul>
 <li>centos开发工具安装</li>
 </ul>
@@ -646,7 +660,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装JDK"><span class="nav-number">1.</span> <span class="nav-text">安装JDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Android-SDK"><span class="nav-number">2.</span> <span class="nav-text">安装Android SDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他工具安装"><span class="nav-number">3.</span> <span class="nav-text">其他工具安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">4.</span> <span class="nav-text">附录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#安装JDK"><span class="nav-number">1.</span> <span class="nav-text">安装JDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装Android-SDK"><span class="nav-number">2.</span> <span class="nav-text">安装Android SDK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NDK配置"><span class="nav-number">3.</span> <span class="nav-text">NDK配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他工具安装"><span class="nav-number">4.</span> <span class="nav-text">其他工具安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附录"><span class="nav-number">5.</span> <span class="nav-text">附录</span></a></li></ol></div>
             
 
           </div>
