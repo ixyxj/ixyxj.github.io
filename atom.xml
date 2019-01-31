@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-01-30T08:58:41.637Z</updated>
+  <updated>2019-01-30T09:01:54.146Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ixyxj.github.io/2019/01/30/CentOS%E6%9E%84%E5%BB%BAAndroid%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
     <id>https://ixyxj.github.io/2019/01/30/CentOS构建Android编译环境/</id>
     <published>2019-01-30T06:54:35.000Z</published>
-    <updated>2019-01-30T08:58:41.637Z</updated>
+    <updated>2019-01-30T09:01:54.146Z</updated>
     
     <summary type="html">
     
@@ -38,6 +38,28 @@
     
     
       <category term="Android" scheme="https://ixyxj.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://ixyxj.github.io/2019/01/30/Zookeeper%E5%85%A5%E9%97%A8/"/>
+    <id>https://ixyxj.github.io/2019/01/30/Zookeeper入门/</id>
+    <published>2019-01-29T16:00:00.000Z</published>
+    <updated>2019-01-31T09:04:26.097Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;h3 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot; title=&quot;原理&quot;&gt;&lt;/a&gt;原理&lt;/h3&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
     
   </entry>
   
@@ -251,7 +273,7 @@
     <link href="https://ixyxj.github.io/2019/01/09/Linux%E5%9F%BA%E7%A1%80/"/>
     <id>https://ixyxj.github.io/2019/01/09/Linux基础/</id>
     <published>2019-01-09T14:23:53.000Z</published>
-    <updated>2019-01-26T12:14:11.413Z</updated>
+    <updated>2019-01-31T08:58:29.766Z</updated>
     
     <summary type="html">
     
@@ -259,7 +281,7 @@
       
         
         
-          &lt;h3 id=&quot;ssh&quot;&gt;&lt;a href=&quot;#ssh&quot; class=&quot;headerlink&quot; title=&quot;ssh&quot;&gt;&lt;/a&gt;ssh&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+          &lt;h3 id=&quot;hosts&quot;&gt;&lt;a href=&quot;#hosts&quot; class=&quot;headerlink&quot; title=&quot;hosts&quot;&gt;&lt;/a&gt;hosts&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
         
       
     
