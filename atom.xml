@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-01-30T09:01:54.146Z</updated>
+  <updated>2019-02-13T15:05:44.721Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CDH实战</title>
+    <link href="https://ixyxj.github.io/2019/02/13/CDH%E5%AE%9E%E6%88%98/"/>
+    <id>https://ixyxj.github.io/2019/02/13/CDH实战/</id>
+    <published>2019-02-13T10:04:52.000Z</published>
+    <updated>2019-02-13T15:05:44.721Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;CDH简介&quot;&gt;&lt;a href=&quot;#CDH简介&quot; class=&quot;headerlink&quot; title=&quot;CDH简介&quot;&gt;&lt;/a&gt;CDH简介&lt;/h3&gt;&lt;p&gt;略&lt;/p&gt;
+&lt;h3 id=&quot;CDH安装&quot;&gt;&lt;a href=&quot;#CDH安装&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Hadoop" scheme="https://ixyxj.github.io/tags/Hadoop/"/>
+    
+  </entry>
   
   <entry>
     <title>CentOS构建Android编译环境</title>
@@ -46,7 +71,7 @@
     <link href="https://ixyxj.github.io/2019/01/30/Zookeeper%E5%85%A5%E9%97%A8/"/>
     <id>https://ixyxj.github.io/2019/01/30/Zookeeper入门/</id>
     <published>2019-01-29T16:00:00.000Z</published>
-    <updated>2019-01-31T09:10:11.518Z</updated>
+    <updated>2019-02-01T15:50:28.928Z</updated>
     
     <summary type="html">
     
@@ -483,31 +508,6 @@
     
     
       <category term="blog" scheme="https://ixyxj.github.io/tags/blog/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SQL入门</title>
-    <link href="https://ixyxj.github.io/2018/12/15/SQL%E5%85%A5%E9%97%A8/"/>
-    <id>https://ixyxj.github.io/2018/12/15/SQL入门/</id>
-    <published>2018-12-15T12:34:12.000Z</published>
-    <updated>2019-01-20T10:07:21.849Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;总览&quot;&gt;&lt;a href=&quot;#总览&quot; class=&quot;headerlink&quot; title=&quot;总览&quot;&gt;&lt;/a&gt;总览&lt;/h3&gt;&lt;img src=&quot;/2018/12/15/SQL入门/SQL入门.png&quot; title=&quot;SQL入门&quot;&gt;
-&lt;h3 id=&quot;基础&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="sql" scheme="https://ixyxj.github.io/tags/sql/"/>
     
   </entry>
   
