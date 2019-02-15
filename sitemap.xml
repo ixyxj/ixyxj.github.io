@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ixyxj.github.io/2019/02/15/Tutorial-Hue/</loc>
+    
+    <lastmod>2019-02-15T10:35:51.496Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ixyxj.github.io/2019/01/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/</loc>
+    
+    <lastmod>2019-02-15T10:06:04.596Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ixyxj.github.io/2019/02/13/CDH%E5%AE%9E%E6%88%98/</loc>
+    
+    <lastmod>2019-02-15T10:05:43.310Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ixyxj.github.io/2019/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8B%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9B%86%E7%BE%A4/</loc>
+    
+    <lastmod>2019-02-15T10:05:29.146Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ixyxj.github.io/2019/01/10/shell%E5%AE%9E%E6%88%98/</loc>
+    
+    <lastmod>2019-02-15T10:05:24.832Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ixyxj.github.io/2019/01/13/Hadoop%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2019-02-15T10:05:14.210Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ixyxj.github.io/2019/01/18/Hive%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2019-02-15T10:05:11.912Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ixyxj.github.io/2019/01/23/HBase%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2019-02-15T10:05:07.126Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ixyxj.github.io/2019/01/30/Zookeeper%E5%85%A5%E9%97%A8/</loc>
+    
+    <lastmod>2019-02-15T10:04:49.418Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ixyxj.github.io/about/index.html</loc>
     
     <lastmod>2019-02-14T13:54:05.413Z</lastmod>
@@ -16,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://ixyxj.github.io/2019/01/30/Zookeeper%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2019-02-14T12:57:04.152Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ixyxj.github.io/tags/index.html</loc>
     
     <lastmod>2019-02-14T12:53:05.038Z</lastmod>
@@ -33,13 +89,6 @@
     <loc>https://ixyxj.github.io/categories/index.html</loc>
     
     <lastmod>2019-02-14T12:51:55.904Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ixyxj.github.io/2019/02/13/CDH%E5%AE%9E%E6%88%98/</loc>
-    
-    <lastmod>2019-02-13T15:05:44.721Z</lastmod>
     
   </url>
   
@@ -79,20 +128,6 @@
   </url>
   
   <url>
-    <loc>https://ixyxj.github.io/2019/01/23/HBase%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2019-01-24T15:02:11.620Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ixyxj.github.io/2019/01/18/Hive%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2019-01-22T01:49:55.406Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ixyxj.github.io/2018/12/15/SQL%E5%85%A5%E9%97%A8/</loc>
     
     <lastmod>2019-01-20T10:07:21.849Z</lastmod>
@@ -100,37 +135,9 @@
   </url>
   
   <url>
-    <loc>https://ixyxj.github.io/2019/01/13/Hadoop%E5%85%A5%E9%97%A8/</loc>
-    
-    <lastmod>2019-01-18T11:17:48.549Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ixyxj.github.io/2019/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8B%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9B%86%E7%BE%A4/</loc>
-    
-    <lastmod>2019-01-14T09:13:23.039Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ixyxj.github.io/2019/01/12/%E6%9E%B6%E6%9E%84%E7%95%85%E6%83%B3/</loc>
     
     <lastmod>2019-01-12T16:25:59.862Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ixyxj.github.io/2019/01/10/shell%E5%AE%9E%E6%88%98/</loc>
-    
-    <lastmod>2019-01-10T18:09:39.245Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ixyxj.github.io/2019/01/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/</loc>
-    
-    <lastmod>2019-01-07T16:46:42.362Z</lastmod>
     
   </url>
   

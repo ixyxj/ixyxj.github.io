@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-02-13T15:05:44.721Z</updated>
+  <updated>2019-02-15T10:35:51.496Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Tutorial-Hue</title>
+    <link href="https://ixyxj.github.io/2019/02/15/Tutorial-Hue/"/>
+    <id>https://ixyxj.github.io/2019/02/15/Tutorial-Hue/</id>
+    <published>2019-02-15T10:01:17.000Z</published>
+    <updated>2019-02-15T10:35:51.496Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CDH实战</title>
     <link href="https://ixyxj.github.io/2019/02/13/CDH%E5%AE%9E%E6%88%98/"/>
     <id>https://ixyxj.github.io/2019/02/13/CDH实战/</id>
     <published>2019-02-13T10:04:52.000Z</published>
-    <updated>2019-02-13T15:05:44.721Z</updated>
+    <updated>2019-02-15T10:05:43.310Z</updated>
     
     <summary type="html">
     
@@ -37,7 +61,32 @@
     </summary>
     
     
-      <category term="Hadoop" scheme="https://ixyxj.github.io/tags/Hadoop/"/>
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Zookeeper入门</title>
+    <link href="https://ixyxj.github.io/2019/01/30/Zookeeper%E5%85%A5%E9%97%A8/"/>
+    <id>https://ixyxj.github.io/2019/01/30/Zookeeper入门/</id>
+    <published>2019-01-30T06:54:35.000Z</published>
+    <updated>2019-02-15T10:04:49.418Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;略&lt;/p&gt;
+&lt;h3 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -63,31 +112,6 @@
     
     
       <category term="Android" scheme="https://ixyxj.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Zookeeper入门</title>
-    <link href="https://ixyxj.github.io/2019/01/30/Zookeeper%E5%85%A5%E9%97%A8/"/>
-    <id>https://ixyxj.github.io/2019/01/30/Zookeeper入门/</id>
-    <published>2019-01-30T06:54:35.000Z</published>
-    <updated>2019-02-14T12:57:04.152Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;略&lt;/p&gt;
-&lt;h3 id=&quot;原理&quot;&gt;&lt;a href=&quot;#原理&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="https://ixyxj.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -174,7 +198,7 @@
     <link href="https://ixyxj.github.io/2019/01/23/HBase%E5%85%A5%E9%97%A8/"/>
     <id>https://ixyxj.github.io/2019/01/23/HBase入门/</id>
     <published>2019-01-23T10:24:24.000Z</published>
-    <updated>2019-01-24T15:02:11.620Z</updated>
+    <updated>2019-02-15T10:05:07.126Z</updated>
     
     <summary type="html">
     
@@ -190,7 +214,7 @@
     </summary>
     
     
-      <category term="HBase" scheme="https://ixyxj.github.io/tags/HBase/"/>
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -199,7 +223,7 @@
     <link href="https://ixyxj.github.io/2019/01/18/Hive%E5%85%A5%E9%97%A8/"/>
     <id>https://ixyxj.github.io/2019/01/18/Hive入门/</id>
     <published>2019-01-18T11:18:22.000Z</published>
-    <updated>2019-01-22T01:49:55.406Z</updated>
+    <updated>2019-02-15T10:05:11.912Z</updated>
     
     <summary type="html">
     
@@ -215,7 +239,7 @@
     </summary>
     
     
-      <category term="Hive" scheme="https://ixyxj.github.io/tags/Hive/"/>
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -224,7 +248,7 @@
     <link href="https://ixyxj.github.io/2019/01/13/Hadoop%E5%85%A5%E9%97%A8/"/>
     <id>https://ixyxj.github.io/2019/01/13/Hadoop入门/</id>
     <published>2019-01-13T04:23:51.000Z</published>
-    <updated>2019-01-18T11:17:48.549Z</updated>
+    <updated>2019-02-15T10:05:14.210Z</updated>
     
     <summary type="html">
     
@@ -241,7 +265,7 @@
     </summary>
     
     
-      <category term="Hadoop" scheme="https://ixyxj.github.io/tags/Hadoop/"/>
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -277,7 +301,7 @@
     <link href="https://ixyxj.github.io/2019/01/10/shell%E5%AE%9E%E6%88%98/"/>
     <id>https://ixyxj.github.io/2019/01/10/shell实战/</id>
     <published>2019-01-10T12:56:25.000Z</published>
-    <updated>2019-01-10T18:09:39.245Z</updated>
+    <updated>2019-02-15T10:05:24.832Z</updated>
     
     <summary type="html">
     
@@ -292,7 +316,7 @@
     </summary>
     
     
-      <category term="Shell" scheme="https://ixyxj.github.io/tags/Shell/"/>
+      <category term="Linux" scheme="https://ixyxj.github.io/tags/Linux/"/>
     
   </entry>
   
@@ -325,7 +349,7 @@
     <link href="https://ixyxj.github.io/2019/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8B%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9B%86%E7%BE%A4/"/>
     <id>https://ixyxj.github.io/2019/01/08/大数据之配置本地虚拟机集群/</id>
     <published>2019-01-08T07:11:25.000Z</published>
-    <updated>2019-01-14T09:13:23.039Z</updated>
+    <updated>2019-02-15T10:05:29.146Z</updated>
     
     <summary type="html">
     
@@ -340,7 +364,7 @@
     </summary>
     
     
-      <category term="bigdata" scheme="https://ixyxj.github.io/tags/bigdata/"/>
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -349,7 +373,7 @@
     <link href="https://ixyxj.github.io/2019/01/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/"/>
     <id>https://ixyxj.github.io/2019/01/07/大数据入门概述/</id>
     <published>2019-01-07T15:53:00.000Z</published>
-    <updated>2019-01-07T16:46:42.362Z</updated>
+    <updated>2019-02-15T10:06:04.596Z</updated>
     
     <summary type="html">
     
@@ -364,7 +388,7 @@
     </summary>
     
     
-      <category term="Bigdata" scheme="https://ixyxj.github.io/tags/Bigdata/"/>
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
     
   </entry>
   
@@ -487,30 +511,6 @@
     
     
       <category term="Dart" scheme="https://ixyxj.github.io/tags/Dart/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo搭建博客在GithubPages</title>
-    <link href="https://ixyxj.github.io/2018/12/15/Hexo%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E5%9C%A8GithubPages/"/>
-    <id>https://ixyxj.github.io/2018/12/15/Hexo搭建博客在GithubPages/</id>
-    <published>2018-12-15T13:04:15.000Z</published>
-    <updated>2019-02-14T13:23:12.811Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;开始&quot;&gt;&lt;a href=&quot;#开始&quot; class=&quot;headerlink&quot; title=&quot;开始&quot;&gt;&lt;/a&gt;开始&lt;/h1&gt;&lt;p&gt;首先得有一个github账户,如果没有&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="blog" scheme="https://ixyxj.github.io/tags/blog/"/>
     
   </entry>
   

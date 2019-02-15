@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="Hadoop,">
+  <meta name="keywords" content="Big Data,">
 
 
 
@@ -108,14 +108,14 @@
 
 
 <meta name="description" content="CDH简介略 CDH安装系统环境准备 网络配置  vim /etc/systemfig/network vim /etc/hosts 修改每台节点的name和ip     SSH免密钥登录  ssh localhost //将自己的密钥加入到known_hosts  ssh-kegen -t rsa -P ‘’ -f ~/.ssh/id_rsa  ssh-copy-id cat id_rsa.pu">
-<meta name="keywords" content="Hadoop">
+<meta name="keywords" content="Big Data">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CDH实战">
 <meta property="og:url" content="https://ixyxj.github.io/2019/02/13/CDH实战/index.html">
 <meta property="og:site_name" content="ixyxj">
 <meta property="og:description" content="CDH简介略 CDH安装系统环境准备 网络配置  vim /etc/systemfig/network vim /etc/hosts 修改每台节点的name和ip     SSH免密钥登录  ssh localhost //将自己的密钥加入到known_hosts  ssh-kegen -t rsa -P ‘’ -f ~/.ssh/id_rsa  ssh-copy-id cat id_rsa.pu">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-13T15:05:44.721Z">
+<meta property="og:updated_time" content="2019-02-15T10:05:43.310Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CDH实战">
 <meta name="twitter:description" content="CDH简介略 CDH安装系统环境准备 网络配置  vim /etc/systemfig/network vim /etc/hosts 修改每台节点的name和ip     SSH免密钥登录  ssh localhost //将自己的密钥加入到known_hosts  ssh-kegen -t rsa -P ‘’ -f ~/.ssh/id_rsa  ssh-copy-id cat id_rsa.pu">
@@ -539,6 +539,23 @@
 </ol>
 <p>启动了之后,将设置安全性</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo 0 &gt; /proc/sys/vm/sqappiness</span><br></pre></td></tr></table></figure>
+<h3 id="Cloudera-Manager使用"><a href="#Cloudera-Manager使用" class="headerlink" title="Cloudera Manager使用"></a>Cloudera Manager使用</h3><p>名词解释:</p>
+<blockquote>
+<p>主机-host, 机架-rack, 集群-cluster, 服务-service, 服务实例-service instance, 角色-role, 角色实例-role instance, 角色组-role group, 主机模板-host templete parcel, 静态服务池-static service pool. 动态资源池-dynamic resource pool</p>
+</blockquote>
+<h3 id="集群"><a href="#集群" class="headerlink" title="集群"></a>集群</h3><ol>
+<li>离线集群</li>
+<li>实时计算集群</li>
+<li>查询集群Hbase</li>
+</ol>
+<blockquote>
+<p>为什么Hbase查询很快?</p>
+</blockquote>
+<ul>
+<li>分布式</li>
+<li>列存储</li>
+<li>内存缓存机制</li>
+</ul>
 
       
     </div>
@@ -585,7 +602,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hadoop/" rel="tag"># Hadoop</a>
+            <a href="/tags/Big-Data/" rel="tag"># Big Data</a>
           
         </div>
       
@@ -598,8 +615,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/30/CentOS构建Android编译环境/" rel="next" title="CentOS构建Android编译环境">
-                <i class="fa fa-chevron-left"></i> CentOS构建Android编译环境
+              <a href="/2019/01/30/Zookeeper入门/" rel="next" title="Zookeeper入门">
+                <i class="fa fa-chevron-left"></i> Zookeeper入门
               </a>
             
           </div>
@@ -607,6 +624,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/15/Tutorial-Hue/" rel="prev" title="Tutorial-Hue">
+                Tutorial-Hue <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -685,7 +706,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -698,7 +719,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -754,7 +775,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CDH简介"><span class="nav-number">1.</span> <span class="nav-text">CDH简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CDH安装"><span class="nav-number">2.</span> <span class="nav-text">CDH安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#系统环境准备"><span class="nav-number">2.1.</span> <span class="nav-text">系统环境准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装ClouderaManager"><span class="nav-number">2.2.</span> <span class="nav-text">安装ClouderaManager</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CDH简介"><span class="nav-number">1.</span> <span class="nav-text">CDH简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CDH安装"><span class="nav-number">2.</span> <span class="nav-text">CDH安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#系统环境准备"><span class="nav-number">2.1.</span> <span class="nav-text">系统环境准备</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装ClouderaManager"><span class="nav-number">2.2.</span> <span class="nav-text">安装ClouderaManager</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloudera-Manager使用"><span class="nav-number">3.</span> <span class="nav-text">Cloudera Manager使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群"><span class="nav-number">4.</span> <span class="nav-text">集群</span></a></li></ol></div>
             
 
           </div>
