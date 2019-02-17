@@ -107,18 +107,20 @@
 
 
 
-<meta name="description" content="Scala的设计理念简单的说就是讲不同语言中的多个概念融合在一起 Scala的函数式编程和面向对象编程略 核心规则 交互式编程 REPL">
+<meta name="description" content="Scala的设计理念简单的说就是讲不同语言中的多个概念融合在一起  Scala的函数式编程和面向对象编程略 六大特征 Java和Scala混编 类型推断 并发和分布式(Actor) 特质,特征(类似java中的接口和抽象类) 模式匹配 高阶函数   类和对象 对象object   方法和变量都是静态的 定义常量用val object不可以传参   类 class   变量用var, 常量用val">
 <meta name="keywords" content="Scala">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Scala进阶">
 <meta property="og:url" content="https://ixyxj.github.io/2019/01/07/Scala进阶/index.html">
 <meta property="og:site_name" content="ixyxj">
-<meta property="og:description" content="Scala的设计理念简单的说就是讲不同语言中的多个概念融合在一起 Scala的函数式编程和面向对象编程略 核心规则 交互式编程 REPL">
+<meta property="og:description" content="Scala的设计理念简单的说就是讲不同语言中的多个概念融合在一起  Scala的函数式编程和面向对象编程略 六大特征 Java和Scala混编 类型推断 并发和分布式(Actor) 特质,特征(类似java中的接口和抽象类) 模式匹配 高阶函数   类和对象 对象object   方法和变量都是静态的 定义常量用val object不可以传参   类 class   变量用var, 常量用val">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-07T16:46:39.233Z">
+<meta property="og:image" content="https://ixyxj.github.io/2019/01/07/Scala进阶/1.png">
+<meta property="og:updated_time" content="2019-02-17T10:27:10.749Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Scala进阶">
-<meta name="twitter:description" content="Scala的设计理念简单的说就是讲不同语言中的多个概念融合在一起 Scala的函数式编程和面向对象编程略 核心规则 交互式编程 REPL">
+<meta name="twitter:description" content="Scala的设计理念简单的说就是讲不同语言中的多个概念融合在一起  Scala的函数式编程和面向对象编程略 六大特征 Java和Scala混编 类型推断 并发和分布式(Actor) 特质,特征(类似java中的接口和抽象类) 模式匹配 高阶函数   类和对象 对象object   方法和变量都是静态的 定义常量用val object不可以传参   类 class   变量用var, 常量用val">
+<meta name="twitter:image" content="https://ixyxj.github.io/2019/01/07/Scala进阶/1.png">
 
 
 
@@ -398,10 +400,134 @@
 
       
         <h3 id="Scala的设计理念"><a href="#Scala的设计理念" class="headerlink" title="Scala的设计理念"></a>Scala的设计理念</h3><p>简单的说就是讲不同语言中的多个概念融合在一起</p>
+<img src="/2019/01/07/Scala进阶/1.png">
 <h3 id="Scala的函数式编程和面向对象编程"><a href="#Scala的函数式编程和面向对象编程" class="headerlink" title="Scala的函数式编程和面向对象编程"></a>Scala的函数式编程和面向对象编程</h3><p>略</p>
-<h3 id="核心规则"><a href="#核心规则" class="headerlink" title="核心规则"></a>核心规则</h3><blockquote>
-<p>交互式编程 REPL</p>
+<h3 id="六大特征"><a href="#六大特征" class="headerlink" title="六大特征"></a>六大特征</h3><ol>
+<li>Java和Scala混编</li>
+<li>类型推断</li>
+<li>并发和分布式(Actor)</li>
+<li>特质,特征(类似java中的接口和抽象类)</li>
+<li>模式匹配</li>
+<li>高阶函数 </li>
+</ol>
+<h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><blockquote>
+<p>对象object</p>
 </blockquote>
+<ol>
+<li>方法和变量都是静态的</li>
+<li>定义常量用val</li>
+<li>object不可以传参</li>
+</ol>
+<blockquote>
+<p>类 class</p>
+</blockquote>
+<ol>
+<li>变量用var, 常量用val</li>
+<li>一行代码不需要分号分割</li>
+<li>驼峰命名方法</li>
+<li>类可以传参, 就有了默认的构造函数, 勒种默认属性就有了getter和setter方法</li>
+<li>当创建一个class, 除了方法不执行其他都会执行</li>
+<li>scala中class和object同名, 这个class叫做这个object的伴生类, object是这个class的伴生对象, 就可以互相访问私有变量.</li>
+<li>同一个包里面,类名不能重复</li>
+</ol>
+<blockquote>
+<p>scala版九九乘法表</p>
+</blockquote>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">NineNineMultiplicationTable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (a &lt;- <span class="number">1</span> until <span class="number">10</span>; b &lt;- <span class="number">1</span> to <span class="number">10</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (a &gt;= b) &#123;</span><br><span class="line">        print(a + <span class="string">"x"</span> + b + <span class="string">"="</span> + a*b + <span class="string">"\t"</span>)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">if</span> (a == b) &#123;</span><br><span class="line">        println()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 结果</span></span><br><span class="line"></span><br><span class="line"><span class="number">1</span>x1=<span class="number">1</span>	</span><br><span class="line"><span class="number">2</span>x1=<span class="number">2</span>	<span class="number">2</span>x2=<span class="number">4</span>	</span><br><span class="line"><span class="number">3</span>x1=<span class="number">3</span>	<span class="number">3</span>x2=<span class="number">6</span>	<span class="number">3</span>x3=<span class="number">9</span>	</span><br><span class="line"><span class="number">4</span>x1=<span class="number">4</span>	<span class="number">4</span>x2=<span class="number">8</span>	<span class="number">4</span>x3=<span class="number">12</span>	<span class="number">4</span>x4=<span class="number">16</span>	</span><br><span class="line"><span class="number">5</span>x1=<span class="number">5</span>	<span class="number">5</span>x2=<span class="number">10</span>	<span class="number">5</span>x3=<span class="number">15</span>	<span class="number">5</span>x4=<span class="number">20</span>	<span class="number">5</span>x5=<span class="number">25</span>	</span><br><span class="line"><span class="number">6</span>x1=<span class="number">6</span>	<span class="number">6</span>x2=<span class="number">12</span>	<span class="number">6</span>x3=<span class="number">18</span>	<span class="number">6</span>x4=<span class="number">24</span>	<span class="number">6</span>x5=<span class="number">30</span>	<span class="number">6</span>x6=<span class="number">36</span>	</span><br><span class="line"><span class="number">7</span>x1=<span class="number">7</span>	<span class="number">7</span>x2=<span class="number">14</span>	<span class="number">7</span>x3=<span class="number">21</span>	<span class="number">7</span>x4=<span class="number">28</span>	<span class="number">7</span>x5=<span class="number">35</span>	<span class="number">7</span>x6=<span class="number">42</span>	<span class="number">7</span>x7=<span class="number">49</span>	</span><br><span class="line"><span class="number">8</span>x1=<span class="number">8</span>	<span class="number">8</span>x2=<span class="number">16</span>	<span class="number">8</span>x3=<span class="number">24</span>	<span class="number">8</span>x4=<span class="number">32</span>	<span class="number">8</span>x5=<span class="number">40</span>	<span class="number">8</span>x6=<span class="number">48</span>	<span class="number">8</span>x7=<span class="number">56</span>	<span class="number">8</span>x8=<span class="number">64</span>	</span><br><span class="line"><span class="number">9</span>x1=<span class="number">9</span>	<span class="number">9</span>x2=<span class="number">18</span>	<span class="number">9</span>x3=<span class="number">27</span>	<span class="number">9</span>x4=<span class="number">36</span>	<span class="number">9</span>x5=<span class="number">45</span>	<span class="number">9</span>x6=<span class="number">54</span>	<span class="number">9</span>x7=<span class="number">63</span>	<span class="number">9</span>x8=<span class="number">72</span>	<span class="number">9</span>x9=<span class="number">81</span></span><br></pre></td></tr></table></figure>
+<h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><blockquote>
+<p>函数返回值</p>
+</blockquote>
+<ul>
+<li>如果需要函数返回值可以在最后写 “=”</li>
+</ul>
+<blockquote>
+<p>递归函数</p>
+</blockquote>
+<ul>
+<li>递归函数返回值需要显示声明</li>
+</ul>
+<blockquote>
+<p>参数有默认值的函数</p>
+</blockquote>
+<ul>
+<li>直接在函数参数写”=”</li>
+</ul>
+<blockquote>
+<p>可变参数函数</p>
+</blockquote>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span></span>(array: <span class="type">String</span>*) &#123;</span><br><span class="line">    println(array)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>匿名函数</p>
+</blockquote>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">()=&gt; &#123;</span><br><span class="line">	println(<span class="string">"hell0 world"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>嵌套函数</p>
+</blockquote>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f1</span></span>(a: <span class="type">Int</span>) &#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">f2</span></span>(num: <span class="type">Int</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (num == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="number">1</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            num * f2(num - <span class="number">1</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    f2(a)</span><br><span class="line">&#125;</span><br><span class="line">f1(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>偏应用函数</p>
+</blockquote>
+<ul>
+<li>固定函数不变的参数,可变的参数将其用”_”表示,并复制给一个变量,这是只需要传可变的参数即可</li>
+</ul>
+<blockquote>
+<p>高阶函数</p>
+</blockquote>
+<ol>
+<li>函数的参数是函数</li>
+<li>函数的返回值是函数</li>
+<li>函数的参数和返回值是函数</li>
+</ol>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f1</span></span>(a: <span class="type">Int</span>, b: <span class="type">Int</span>): <span class="type">Int</span> = &#123;</span><br><span class="line">    a+b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">f2</span></span>(s: <span class="type">String</span>, f: (<span class="type">Int</span>, <span class="type">Int</span>) =&gt; <span class="type">Int</span>) &#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="集合列表数组"><a href="#集合列表数组" class="headerlink" title="集合列表数组"></a>集合列表数组</h3><blockquote>
+<p>数组</p>
+</blockquote>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Array</span></span><br><span class="line"><span class="keyword">val</span> arr = <span class="type">Array</span>[<span class="type">Int</span>](<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)</span><br><span class="line">arr.foreach(println)</span><br><span class="line"></span><br><span class="line"><span class="keyword">val</span> arr2 = <span class="keyword">new</span> <span class="type">Array</span>[<span class="type">String</span>](<span class="number">3</span>)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>列表</p>
+</blockquote>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// list</span></span><br><span class="line"><span class="keyword">val</span> list = <span class="type">List</span>(<span class="string">"hi 1"</span>, <span class="string">"hi 2"</span>, <span class="string">"hi 3"</span>)</span><br><span class="line"><span class="keyword">val</span> result = list.map( f =&gt; &#123;</span><br><span class="line">    f.split(<span class="string">" "</span>)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">result.foreach(a =&gt; &#123;</span><br><span class="line">    println(<span class="string">"+++++++++"</span>)</span><br><span class="line">    a.foreach(println)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>map和flatmap的区别?</p>
+<ul>
+<li>前者是处理返回下一个处理结果的数组类型, split返回List[Array[String]], 一对一</li>
+<li>后者直接返回List[String], 一对多</li>
+</ul>
+<blockquote>
+<p>Set, 去重无序</p>
+</blockquote>
+<blockquote>
+<p>map键值对</p>
+</blockquote>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">val</span> map = <span class="type">Map</span>(<span class="number">1</span> -&gt; <span class="string">"a"</span>, <span class="number">2</span> -&gt; <span class="string">"b"</span>)</span><br><span class="line"><span class="keyword">val</span> value = map.get(<span class="number">2</span>) <span class="comment">//返回值是Option, 包含null和some, 无值和有值</span></span><br><span class="line"><span class="keyword">val</span> keys = map.keys</span><br><span class="line"><span class="keyword">val</span> values = map.values</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>元组</p>
+</blockquote>
+<ul>
+<li><p>最多支持22个元素</p>
+</li>
+<li><p>new可写可不写</p>
+</li>
+<li>迭代器便利 productIterator</li>
+</ul>
+<h3 id="特质-Trait"><a href="#特质-Trait" class="headerlink" title="特质 Trait"></a>特质 Trait</h3><ul>
+<li>不可以传参</li>
+<li>可以被多继承 extends</li>
+</ul>
+<h3 id="模式匹配"><a href="#模式匹配" class="headerlink" title="模式匹配"></a>模式匹配</h3><figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">matchTest</span></span>(a: <span class="type">Any</span>) &#123;</span><br><span class="line">    a <span class="keyword">match</span> &#123;</span><br><span class="line">        <span class="keyword">case</span> <span class="number">1</span> =&gt; println(<span class="string">"1"</span>)	<span class="comment">//匹配值</span></span><br><span class="line">        <span class="keyword">case</span> i: <span class="type">Int</span> =&gt; println(<span class="string">"int"</span>)<span class="comment">//匹配类型</span></span><br><span class="line">        <span class="keyword">case</span> s: <span class="type">String</span> =&gt; println(<span class="string">"string"</span>)</span><br><span class="line">        <span class="keyword">case</span> _ =&gt; println(<span class="string">"default"</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Actor 是通信模型, Spark底层节点之间的通信就是Akka, Akka是通信模型, Akka是Actor实现的.</p>
+<p>Actor相当于Java线程-Thread, 解决了锁的机制</p>
+</blockquote>
+<ul>
+<li>消息队列, 异步</li>
+</ul>
+<blockquote>
+<p>注意引入的时候,actor已经被遗弃, 用akka取代</p>
+</blockquote>
+<p><a href="https://index.scala-lang.org/akka/akka/akka-actor/2.5.21?target=_2.12" target="_blank" rel="noopener">akka下载引入</a></p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//sbt方式</span></span><br><span class="line">libraryDependencies += <span class="string">"com.typesafe.akka"</span> %% <span class="string">"akka-actor"</span> % <span class="string">"2.5.21"</span></span><br></pre></td></tr></table></figure>
+<p>简单使用</p>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyActor</span> <span class="keyword">extends</span> <span class="title">Actor</span> </span>&#123;</span><br><span class="line">    <span class="keyword">override</span> <span class="function"><span class="keyword">def</span> <span class="title">receive</span></span>: <span class="type">Receive</span> = &#123;</span><br><span class="line">        <span class="keyword">case</span> s: <span class="type">String</span> =&gt; println(s)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">object</span> <span class="title">ActorApp</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">main</span></span>(args: <span class="type">Array</span>[<span class="type">String</span>]): <span class="type">Unit</span> = &#123;</span><br><span class="line">        <span class="keyword">val</span> a = <span class="type">ActorSystem</span>(<span class="string">"main"</span>).actorOf(<span class="type">Props</span>[<span class="type">MyActor</span>])</span><br><span class="line">        a ! <span class="string">"hello"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -552,7 +678,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">28</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -565,7 +691,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -621,7 +747,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Scala的设计理念"><span class="nav-number">1.</span> <span class="nav-text">Scala的设计理念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scala的函数式编程和面向对象编程"><span class="nav-number">2.</span> <span class="nav-text">Scala的函数式编程和面向对象编程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核心规则"><span class="nav-number">3.</span> <span class="nav-text">核心规则</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Scala的设计理念"><span class="nav-number">1.</span> <span class="nav-text">Scala的设计理念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scala的函数式编程和面向对象编程"><span class="nav-number">2.</span> <span class="nav-text">Scala的函数式编程和面向对象编程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#六大特征"><span class="nav-number">3.</span> <span class="nav-text">六大特征</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类和对象"><span class="nav-number">4.</span> <span class="nav-text">类和对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">5.</span> <span class="nav-text">函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集合列表数组"><span class="nav-number">6.</span> <span class="nav-text">集合列表数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特质-Trait"><span class="nav-number">7.</span> <span class="nav-text">特质 Trait</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模式匹配"><span class="nav-number">8.</span> <span class="nav-text">模式匹配</span></a></li></ol></div>
             
 
           </div>

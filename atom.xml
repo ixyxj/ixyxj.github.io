@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-02-15T10:35:51.496Z</updated>
+  <updated>2019-02-17T17:14:59.139Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -15,6 +15,154 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>sftp教程</title>
+    <link href="https://ixyxj.github.io/2019/02/18/sftp%E6%95%99%E7%A8%8B/"/>
+    <id>https://ixyxj.github.io/2019/02/18/sftp教程/</id>
+    <published>2019-02-17T17:08:02.000Z</published>
+    <updated>2019-02-17T17:14:59.139Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;开始&quot;&gt;&lt;a href=&quot;#开始&quot; class=&quot;headerlink&quot; title=&quot;开始&quot;&gt;&lt;/a&gt;开始&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;上传文件和拉取文件工具&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;使用&quot;&gt;&lt;a href=&quot;#使用&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://ixyxj.github.io/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spark入门</title>
+    <link href="https://ixyxj.github.io/2019/02/18/Spark%E5%85%A5%E9%97%A8/"/>
+    <id>https://ixyxj.github.io/2019/02/18/Spark入门/</id>
+    <published>2019-02-17T16:04:24.000Z</published>
+    <updated>2019-02-17T16:35:25.964Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Spark简介&quot;&gt;&lt;a href=&quot;#Spark简介&quot; class=&quot;headerlink&quot; title=&quot;Spark简介&quot;&gt;&lt;/a&gt;Spark简介&lt;/h3&gt;&lt;p&gt;官网:&lt;a href=&quot;http://spark.apache.org/&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>软件列表</title>
+    <link href="https://ixyxj.github.io/2019/02/16/%E8%BD%AF%E4%BB%B6%E5%88%97%E8%A1%A8/"/>
+    <id>https://ixyxj.github.io/2019/02/16/软件列表/</id>
+    <published>2019-02-15T16:41:06.000Z</published>
+    <updated>2019-02-15T16:42:31.196Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Adobe&quot;&gt;&lt;a href=&quot;#Adobe&quot; class=&quot;headerlink&quot; title=&quot;Adobe&quot;&gt;&lt;/a&gt;Adobe&lt;/h3&gt;&lt;p&gt;win10 PS V20 &lt;strong&gt;链接: &lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="soft" scheme="https://ixyxj.github.io/tags/soft/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis教程</title>
+    <link href="https://ixyxj.github.io/2019/02/15/Redis%E6%95%99%E7%A8%8B/"/>
+    <id>https://ixyxj.github.io/2019/02/15/Redis教程/</id>
+    <published>2019-02-15T15:09:53.000Z</published>
+    <updated>2019-02-16T07:02:45.145Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;REmote DIctionary Server(Redis) 是一个由Salvatore
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Oozie教程</title>
+    <link href="https://ixyxj.github.io/2019/02/15/Oozie%E6%95%99%E7%A8%8B/"/>
+    <id>https://ixyxj.github.io/2019/02/15/Oozie教程/</id>
+    <published>2019-02-15T14:39:35.000Z</published>
+    <updated>2019-02-15T15:09:36.647Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;官网: &lt;a href=&quot;https://oozie.apache.org&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Tutorial-Impala</title>
+    <link href="https://ixyxj.github.io/2019/02/15/Tutorial-Impala/"/>
+    <id>https://ixyxj.github.io/2019/02/15/Tutorial-Impala/</id>
+    <published>2019-02-15T13:13:01.000Z</published>
+    <updated>2019-02-15T14:39:01.686Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
+    
+  </entry>
   
   <entry>
     <title>Tutorial-Hue</title>
@@ -365,152 +513,6 @@
     
     
       <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大数据入门概述</title>
-    <link href="https://ixyxj.github.io/2019/01/07/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/"/>
-    <id>https://ixyxj.github.io/2019/01/07/大数据入门概述/</id>
-    <published>2019-01-07T15:53:00.000Z</published>
-    <updated>2019-02-15T10:06:04.596Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;基于hadoop2-x大数据框架&quot;&gt;&lt;a href=&quot;#基于hadoop2-x大数据框架&quot; class=&quot;headerlink&quot; title=&quot;基于hadoop2.x大数据框架&quot;&gt;&lt;/a&gt;基于hadoop2.x大数据框架&lt;/h3&gt;&lt;p&gt;官网: &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scala进阶</title>
-    <link href="https://ixyxj.github.io/2019/01/07/Scala%E8%BF%9B%E9%98%B6/"/>
-    <id>https://ixyxj.github.io/2019/01/07/Scala进阶/</id>
-    <published>2019-01-07T14:34:05.000Z</published>
-    <updated>2019-01-07T16:46:39.233Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Scala的设计理念&quot;&gt;&lt;a href=&quot;#Scala的设计理念&quot; class=&quot;headerlink&quot; title=&quot;Scala的设计理念&quot;&gt;&lt;/a&gt;Scala的设计理念&lt;/h3&gt;&lt;p&gt;简单的说就是讲不同语言中的多个概念融合在一起&lt;/p&gt;
-&lt;h3
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Scala" scheme="https://ixyxj.github.io/tags/Scala/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Android签名工具Keytool</title>
-    <link href="https://ixyxj.github.io/2019/01/02/Android%E7%AD%BE%E5%90%8D%E5%B7%A5%E5%85%B7Keytool/"/>
-    <id>https://ixyxj.github.io/2019/01/02/Android签名工具Keytool/</id>
-    <published>2019-01-02T14:27:41.000Z</published>
-    <updated>2019-01-02T15:00:50.341Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Android签名&quot;&gt;&lt;a href=&quot;#Android签名&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Android" scheme="https://ixyxj.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Scala入门</title>
-    <link href="https://ixyxj.github.io/2018/12/26/Scala%E5%85%A5%E9%97%A8/"/>
-    <id>https://ixyxj.github.io/2018/12/26/Scala入门/</id>
-    <published>2018-12-26T08:39:42.000Z</published>
-    <updated>2019-01-07T16:06:42.337Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Scala简介&quot;&gt;&lt;a href=&quot;#Scala简介&quot; class=&quot;headerlink&quot; title=&quot;Scala简介&quot;&gt;&lt;/a&gt;Scala简介&lt;/h3&gt;&lt;p&gt;官方教程: Twitter: &lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Scala" scheme="https://ixyxj.github.io/tags/Scala/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter源码分析</title>
-    <link href="https://ixyxj.github.io/2018/12/25/Flutter%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90/"/>
-    <id>https://ixyxj.github.io/2018/12/25/Flutter源码分析/</id>
-    <published>2018-12-25T07:39:52.000Z</published>
-    <updated>2018-12-29T05:04:47.351Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt; 关联项目: &lt;a href=&quot;https://github.com/ixyxj/flutter_cookbook&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Flutter" scheme="https://ixyxj.github.io/tags/Flutter/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Flutter入门</title>
-    <link href="https://ixyxj.github.io/2018/12/19/Flutter%E5%85%A5%E9%97%A8/"/>
-    <id>https://ixyxj.github.io/2018/12/19/Flutter入门/</id>
-    <published>2018-12-19T12:41:46.000Z</published>
-    <updated>2018-12-26T03:34:31.424Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;flutter&quot;&gt;&lt;a href=&quot;#flutter&quot; class=&quot;headerlink&quot; title=&quot;flutter&quot;&gt;&lt;/a&gt;flutter&lt;/h2&gt;&lt;blockquote&gt;
-&lt;p&gt;一个跨平台开发框架包含:&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Dart" scheme="https://ixyxj.github.io/tags/Dart/"/>
     
   </entry>
   
