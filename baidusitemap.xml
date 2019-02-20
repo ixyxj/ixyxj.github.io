@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ixyxj.github.io/2019/01/30/CentOS%E6%9E%84%E5%BB%BAAndroid%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</loc>
+    <lastmod>2019-02-20</lastmod>
+  </url>  <url>
+    <loc>https://ixyxj.github.io/2019/02/19/SpringCloud%E5%AE%9E%E6%88%98-%E9%82%AE%E4%BB%B6/</loc>
+    <lastmod>2019-02-20</lastmod>
+  </url>  <url>
+    <loc>https://ixyxj.github.io/2018/12/15/SQL%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2019-02-20</lastmod>
+  </url>  <url>
+    <loc>https://ixyxj.github.io/2019/02/20/flutter%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/</loc>
+    <lastmod>2019-02-20</lastmod>
+  </url>  <url>
+    <loc>https://ixyxj.github.io/2019/02/19/SpringCloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2019-02-19</lastmod>
+  </url>  <url>
     <loc>https://ixyxj.github.io/2019/02/18/sftp%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2019-02-17</lastmod>
   </url>  <url>
@@ -58,9 +73,6 @@
     <loc>https://ixyxj.github.io/2019/01/09/Linux%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2019-01-31</lastmod>
   </url>  <url>
-    <loc>https://ixyxj.github.io/2019/01/30/CentOS%E6%9E%84%E5%BB%BAAndroid%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/</loc>
-    <lastmod>2019-01-30</lastmod>
-  </url>  <url>
     <loc>https://ixyxj.github.io/2019/01/24/Elasticsearch%E5%85%A5%E9%97%A8/</loc>
     <lastmod>2019-01-26</lastmod>
   </url>  <url>
@@ -69,9 +81,6 @@
   </url>  <url>
     <loc>https://ixyxj.github.io/2019/01/25/FFmpeg%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%A4%A7%E5%85%A8/</loc>
     <lastmod>2019-01-25</lastmod>
-  </url>  <url>
-    <loc>https://ixyxj.github.io/2018/12/15/SQL%E5%85%A5%E9%97%A8/</loc>
-    <lastmod>2019-01-20</lastmod>
   </url>  <url>
     <loc>https://ixyxj.github.io/2019/01/12/%E6%9E%B6%E6%9E%84%E7%95%85%E6%83%B3/</loc>
     <lastmod>2019-01-12</lastmod>

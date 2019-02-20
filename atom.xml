@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-02-17T17:14:59.139Z</updated>
+  <updated>2019-02-20T14:23:11.352Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -15,6 +15,80 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>flutter开发问题汇总</title>
+    <link href="https://ixyxj.github.io/2019/02/20/flutter%E5%BC%80%E5%8F%91%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/"/>
+    <id>https://ixyxj.github.io/2019/02/20/flutter开发问题汇总/</id>
+    <published>2019-02-20T14:22:21.000Z</published>
+    <updated>2019-02-20T14:23:11.352Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;简述&quot;&gt;&lt;a href=&quot;#简述&quot; class=&quot;headerlink&quot; title=&quot;简述&quot;&gt;&lt;/a&gt;简述&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;flutter开发中总有很多小问题, 很烦人.做下汇总,
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Flutter" scheme="https://ixyxj.github.io/tags/Flutter/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringCloud实战-邮件</title>
+    <link href="https://ixyxj.github.io/2019/02/19/SpringCloud%E5%AE%9E%E6%88%98-%E9%82%AE%E4%BB%B6/"/>
+    <id>https://ixyxj.github.io/2019/02/19/SpringCloud实战-邮件/</id>
+    <published>2019-02-19T14:11:04.000Z</published>
+    <updated>2019-02-20T19:55:41.414Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Spring Cloud" scheme="https://ixyxj.github.io/tags/Spring-Cloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringCloud微服务实战入门</title>
+    <link href="https://ixyxj.github.io/2019/02/19/SpringCloud%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AE%9E%E6%88%98%E5%85%A5%E9%97%A8/"/>
+    <id>https://ixyxj.github.io/2019/02/19/SpringCloud微服务实战入门/</id>
+    <published>2019-02-19T11:31:35.000Z</published>
+    <updated>2019-02-19T14:08:49.775Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;什么是微服务&quot;&gt;&lt;a href=&quot;#什么是微服务&quot; class=&quot;headerlink&quot; title=&quot;什么是微服务&quot;&gt;&lt;/a&gt;什么是微服务&lt;/h3&gt;&lt;p&gt;最早在Martin Fowler的blog中提及:&lt;/p&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Spring Cloud" scheme="https://ixyxj.github.io/tags/Spring-Cloud/"/>
+    
+  </entry>
   
   <entry>
     <title>sftp教程</title>
@@ -214,6 +288,31 @@
   </entry>
   
   <entry>
+    <title>CentOS构建Android编译环境</title>
+    <link href="https://ixyxj.github.io/2019/01/30/CentOS%E6%9E%84%E5%BB%BAAndroid%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
+    <id>https://ixyxj.github.io/2019/01/30/CentOS构建Android编译环境/</id>
+    <published>2019-01-30T06:54:35.000Z</published>
+    <updated>2019-02-20T20:03:02.178Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;安装JDK&quot;&gt;&lt;a href=&quot;#安装JDK&quot; class=&quot;headerlink&quot; title=&quot;安装JDK&quot;&gt;&lt;/a&gt;安装JDK&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="https://ixyxj.github.io/tags/Android/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Zookeeper入门</title>
     <link href="https://ixyxj.github.io/2019/01/30/Zookeeper%E5%85%A5%E9%97%A8/"/>
     <id>https://ixyxj.github.io/2019/01/30/Zookeeper入门/</id>
@@ -235,31 +334,6 @@
     
     
       <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CentOS构建Android编译环境</title>
-    <link href="https://ixyxj.github.io/2019/01/30/CentOS%E6%9E%84%E5%BB%BAAndroid%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
-    <id>https://ixyxj.github.io/2019/01/30/CentOS构建Android编译环境/</id>
-    <published>2019-01-30T06:54:35.000Z</published>
-    <updated>2019-01-30T09:01:54.146Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;安装JDK&quot;&gt;&lt;a href=&quot;#安装JDK&quot; class=&quot;headerlink&quot; title=&quot;安装JDK&quot;&gt;&lt;/a&gt;安装JDK&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Android" scheme="https://ixyxj.github.io/tags/Android/"/>
     
   </entry>
   
@@ -441,78 +515,6 @@
     
     
       <category term="server" scheme="https://ixyxj.github.io/tags/server/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>shell实战</title>
-    <link href="https://ixyxj.github.io/2019/01/10/shell%E5%AE%9E%E6%88%98/"/>
-    <id>https://ixyxj.github.io/2019/01/10/shell实战/</id>
-    <published>2019-01-10T12:56:25.000Z</published>
-    <updated>2019-02-15T10:05:24.832Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Bash的理解&quot;&gt;&lt;a href=&quot;#Bash的理解&quot; class=&quot;headerlink&quot; title=&quot;Bash的理解&quot;&gt;&lt;/a&gt;Bash的理解&lt;/h3&gt;&lt;h3 id=&quot;文件和流重定向&quot;&gt;&lt;a href=&quot;#文件和流重定向&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="https://ixyxj.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux基础</title>
-    <link href="https://ixyxj.github.io/2019/01/09/Linux%E5%9F%BA%E7%A1%80/"/>
-    <id>https://ixyxj.github.io/2019/01/09/Linux基础/</id>
-    <published>2019-01-09T14:23:53.000Z</published>
-    <updated>2019-01-31T08:58:29.766Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;hosts&quot;&gt;&lt;a href=&quot;#hosts&quot; class=&quot;headerlink&quot; title=&quot;hosts&quot;&gt;&lt;/a&gt;hosts&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Linux" scheme="https://ixyxj.github.io/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>大数据之配置本地虚拟机集群</title>
-    <link href="https://ixyxj.github.io/2019/01/08/%E5%A4%A7%E6%95%B0%E6%8D%AE%E4%B9%8B%E9%85%8D%E7%BD%AE%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%9B%86%E7%BE%A4/"/>
-    <id>https://ixyxj.github.io/2019/01/08/大数据之配置本地虚拟机集群/</id>
-    <published>2019-01-08T07:11:25.000Z</published>
-    <updated>2019-02-15T10:05:29.146Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;概述&quot;&gt;&lt;a href=&quot;#概述&quot; class=&quot;headerlink&quot; title=&quot;概述&quot;&gt;&lt;/a&gt;概述&lt;/h3&gt;&lt;p&gt;大数据需要多台服务器集群, 如果用云服务器的话让很多新手都望之却步,
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
     
   </entry>
   
