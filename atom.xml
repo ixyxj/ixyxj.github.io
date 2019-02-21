@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-02-20T14:23:11.352Z</updated>
+  <updated>2019-02-21T16:54:21.646Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>后台运行Linux命令</title>
+    <link href="https://ixyxj.github.io/2019/02/22/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8CLinux%E5%91%BD%E4%BB%A4/"/>
+    <id>https://ixyxj.github.io/2019/02/22/后台运行Linux命令/</id>
+    <published>2019-02-21T16:36:34.000Z</published>
+    <updated>2019-02-21T16:54:21.646Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;p&gt;通常我们需要后台运行一些程序,但是通过连接到服务器的窗口关闭都会发出终止的指令.简单的说远程终端断开连接, 进程就会停止.&lt;/p&gt;
+&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Linux" scheme="https://ixyxj.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>flutter开发问题汇总</title>
@@ -46,7 +71,7 @@
     <link href="https://ixyxj.github.io/2019/02/19/SpringCloud%E5%AE%9E%E6%88%98-%E9%82%AE%E4%BB%B6/"/>
     <id>https://ixyxj.github.io/2019/02/19/SpringCloud实战-邮件/</id>
     <published>2019-02-19T14:11:04.000Z</published>
-    <updated>2019-02-21T10:50:35.820Z</updated>
+    <updated>2019-02-21T16:27:16.426Z</updated>
     
     <summary type="html">
     
@@ -288,31 +313,6 @@
   </entry>
   
   <entry>
-    <title>CentOS构建Android编译环境</title>
-    <link href="https://ixyxj.github.io/2019/01/30/CentOS%E6%9E%84%E5%BB%BAAndroid%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
-    <id>https://ixyxj.github.io/2019/01/30/CentOS构建Android编译环境/</id>
-    <published>2019-01-30T06:54:35.000Z</published>
-    <updated>2019-02-20T20:03:02.178Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;安装JDK&quot;&gt;&lt;a href=&quot;#安装JDK&quot; class=&quot;headerlink&quot; title=&quot;安装JDK&quot;&gt;&lt;/a&gt;安装JDK&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Android" scheme="https://ixyxj.github.io/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Zookeeper入门</title>
     <link href="https://ixyxj.github.io/2019/01/30/Zookeeper%E5%85%A5%E9%97%A8/"/>
     <id>https://ixyxj.github.io/2019/01/30/Zookeeper入门/</id>
@@ -334,6 +334,31 @@
     
     
       <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CentOS构建Android编译环境</title>
+    <link href="https://ixyxj.github.io/2019/01/30/CentOS%E6%9E%84%E5%BB%BAAndroid%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83/"/>
+    <id>https://ixyxj.github.io/2019/01/30/CentOS构建Android编译环境/</id>
+    <published>2019-01-30T06:54:35.000Z</published>
+    <updated>2019-02-20T20:03:02.178Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;安装JDK&quot;&gt;&lt;a href=&quot;#安装JDK&quot; class=&quot;headerlink&quot; title=&quot;安装JDK&quot;&gt;&lt;/a&gt;安装JDK&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="https://ixyxj.github.io/tags/Android/"/>
     
   </entry>
   
@@ -488,33 +513,6 @@
     
     
       <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>架构畅想</title>
-    <link href="https://ixyxj.github.io/2019/01/12/%E6%9E%B6%E6%9E%84%E7%95%85%E6%83%B3/"/>
-    <id>https://ixyxj.github.io/2019/01/12/架构畅想/</id>
-    <published>2019-01-12T10:31:52.000Z</published>
-    <updated>2019-01-12T16:25:59.862Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;开发模式&quot;&gt;&lt;a href=&quot;#开发模式&quot; class=&quot;headerlink&quot; title=&quot;开发模式&quot;&gt;&lt;/a&gt;开发模式&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;面向服务编程&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;反向代理&quot;&gt;&lt;a href=&quot;#反向代理&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="server" scheme="https://ixyxj.github.io/tags/server/"/>
     
   </entry>
   

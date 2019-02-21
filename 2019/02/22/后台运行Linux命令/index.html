@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="develop,">
+  <meta name="keywords" content="Linux,">
 
 
 
@@ -107,18 +107,18 @@
 
 
 
-<meta name="description" content="设置淘宝npm镜像node安装 持久化使用 1npm config set registry https://registry.npm.taobao.org">
-<meta name="keywords" content="develop">
+<meta name="description" content="介绍通常我们需要后台运行一些程序,但是通过连接到服务器的窗口关闭都会发出终止的指令.简单的说远程终端断开连接, 进程就会停止. 解释一个进程对应一个pid, 会话是一个多进程的集合,就是我们的远程窗口,当用户连接到服务器就会在创建linux/dev/pid一个文件, 要实现后台Daemon执行, 需要满足如下条件,:  标准输入重定向 进程不受终端关闭的影响  首先在linux上使用 “&amp;amp;">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Help">
-<meta property="og:url" content="https://ixyxj.github.io/2019/01/26/Help/index.html">
+<meta property="og:title" content="后台运行Linux命令">
+<meta property="og:url" content="https://ixyxj.github.io/2019/02/22/后台运行Linux命令/index.html">
 <meta property="og:site_name" content="ixyxj">
-<meta property="og:description" content="设置淘宝npm镜像node安装 持久化使用 1npm config set registry https://registry.npm.taobao.org">
+<meta property="og:description" content="介绍通常我们需要后台运行一些程序,但是通过连接到服务器的窗口关闭都会发出终止的指令.简单的说远程终端断开连接, 进程就会停止. 解释一个进程对应一个pid, 会话是一个多进程的集合,就是我们的远程窗口,当用户连接到服务器就会在创建linux/dev/pid一个文件, 要实现后台Daemon执行, 需要满足如下条件,:  标准输入重定向 进程不受终端关闭的影响  首先在linux上使用 “&amp;amp;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-26T12:19:30.503Z">
+<meta property="og:updated_time" content="2019-02-21T16:54:21.646Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Help">
-<meta name="twitter:description" content="设置淘宝npm镜像node安装 持久化使用 1npm config set registry https://registry.npm.taobao.org">
+<meta name="twitter:title" content="后台运行Linux命令">
+<meta name="twitter:description" content="介绍通常我们需要后台运行一些程序,但是通过连接到服务器的窗口关闭都会发出终止的指令.简单的说远程终端断开连接, 进程就会停止. 解释一个进程对应一个pid, 会话是一个多进程的集合,就是我们的远程窗口,当用户连接到服务器就会在创建linux/dev/pid一个文件, 要实现后台Daemon执行, 需要满足如下条件,:  标准输入重定向 进程不受终端关闭的影响  首先在linux上使用 “&amp;amp;">
 
 
 
@@ -148,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="https://ixyxj.github.io/2019/01/26/Help/">
+  <link rel="canonical" href="https://ixyxj.github.io/2019/02/22/后台运行Linux命令/">
 
 
 
 
 
-  <title>Help | ixyxj</title>
+  <title>后台运行Linux命令 | ixyxj</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ixyxj.github.io/2019/01/26/Help/">
+    <link itemprop="mainEntityOfPage" href="https://ixyxj.github.io/2019/02/22/后台运行Linux命令/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xyxj">
@@ -328,7 +328,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Help</h2>
+          <h2 class="post-title" itemprop="name headline">后台运行Linux命令</h2>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-26T20:15:40+08:00">
-                2019-01-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-22T00:36:34+08:00">
+                2019-02-22
               </time>
             
 
@@ -397,9 +397,38 @@
       
 
       
-        <h3 id="设置淘宝npm镜像"><a href="#设置淘宝npm镜像" class="headerlink" title="设置淘宝npm镜像"></a>设置淘宝npm镜像</h3><p><a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">node安装</a></p>
-<p>持久化使用</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+        <h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><p>通常我们需要后台运行一些程序,但是通过连接到服务器的窗口关闭都会发出终止的指令.简单的说远程终端断开连接, 进程就会停止.</p>
+<h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><p>一个进程对应一个pid, 会话是一个多进程的集合,就是我们的远程窗口,当用户连接到服务器就会在创建linux/dev/pid一个文件, 要实现后台Daemon执行, 需要满足如下条件,:</p>
+<ul>
+<li>标准输入重定向</li>
+<li>进程不受终端关闭的影响</li>
+</ul>
+<p>首先在linux上使用 “&amp;”  ,但是这只是让进程让出前台终端</p>
+<p>其次使用nohup, 如nohup java -jar xxx.jar 会在当前文件下下创建一个nohup.out的文件, 如果不想创建,将其标准输出和标准错误进行重定向</p>
+<h3 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup command &gt; /dev/null 2&gt;&amp;1</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>详细:</p>
+</blockquote>
+<ul>
+<li><p>/dev/null ：代表空设备文件</p>
+</li>
+<li><p>：代表重定向到哪里，例如：echo “1” &gt; /home/temp.txt<br>1  ：表示stdout标准输出，系统默认值是1，所以”&gt;/dev/null”等同于”1&gt;/dev/null”<br>2  ：表示stderr标准错误<br>&amp;  ：表示等同于的意思，2&gt;&amp;1，表示2的输出重定向等同于1</p>
+</li>
+<li><p>1 &gt; /dev/null 2&gt;&amp;1 语句含义：1 &gt; /dev/null ： 首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息。</p>
+</li>
+<li><p>2&gt;&amp;1 ：接着，标准错误输出重定向（等同于）标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。</p>
+</li>
+</ul>
+<p><strong>为何2&gt;&amp;1要写在后面？</strong></p>
+<p>: 为了是标准错误 定向到标准输出中,进入到文件中,而不是到终端输出</p>
+<h3 id="查询任务"><a href="#查询任务" class="headerlink" title="查询任务"></a>查询任务</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jobs</span><br></pre></td></tr></table></figure>
+<h3 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h3><ul>
+<li>ctrl+z : 将进程状态让系统保存,让出前台</li>
+<li>bg : bg%pid 同上</li>
+<li>fg : 前台</li>
+<li>disown: 将作业移除</li>
+<li>fork()</li>
+</ul>
 
       
     </div>
@@ -446,7 +475,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/develop/" rel="tag"># develop</a>
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
           
         </div>
       
@@ -459,8 +488,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/25/FFmpeg命令行大全/" rel="next" title="FFmpeg命令行大全">
-                <i class="fa fa-chevron-left"></i> FFmpeg命令行大全
+              <a href="/2019/02/20/flutter开发问题汇总/" rel="next" title="flutter开发问题汇总">
+                <i class="fa fa-chevron-left"></i> flutter开发问题汇总
               </a>
             
           </div>
@@ -468,10 +497,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/30/CentOS构建Android编译环境/" rel="prev" title="CentOS构建Android编译环境">
-                CentOS构建Android编译环境 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -619,7 +644,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#设置淘宝npm镜像"><span class="nav-number">1.</span> <span class="nav-text">设置淘宝npm镜像</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解释"><span class="nav-number">2.</span> <span class="nav-text">解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命令"><span class="nav-number">3.</span> <span class="nav-text">命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查询任务"><span class="nav-number">4.</span> <span class="nav-text">查询任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其他命令"><span class="nav-number">5.</span> <span class="nav-text">其他命令</span></a></li></ol></div>
             
 
           </div>
