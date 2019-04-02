@@ -107,19 +107,19 @@
 
 
 
-<meta name="description" content="Git速查表">
+<meta name="description" content="Git速查表 Github验证问题 Please make sure you have the correct access rightsand the repository exists.FATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.htmlEr">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git速查表">
 <meta property="og:url" content="https://ixyxj.github.io/2019/03/05/Git速查表/index.html">
 <meta property="og:site_name" content="ixyxj">
-<meta property="og:description" content="Git速查表">
+<meta property="og:description" content="Git速查表 Github验证问题 Please make sure you have the correct access rightsand the repository exists.FATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.htmlEr">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ixyxj.github.io/2019/03/05/Git速查表/git速查表.png">
-<meta property="og:updated_time" content="2019-03-04T16:14:35.500Z">
+<meta property="og:updated_time" content="2019-04-02T16:39:51.612Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git速查表">
-<meta name="twitter:description" content="Git速查表">
+<meta name="twitter:description" content="Git速查表 Github验证问题 Please make sure you have the correct access rightsand the repository exists.FATAL Something’s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.htmlEr">
 <meta name="twitter:image" content="https://ixyxj.github.io/2019/03/05/Git速查表/git速查表.png">
 
 
@@ -400,6 +400,15 @@
 
       
         <h3 id="Git速查表"><a href="#Git速查表" class="headerlink" title="Git速查表"></a>Git速查表</h3><img src="/2019/03/05/Git速查表/git速查表.png">
+<h3 id="Github验证问题"><a href="#Github验证问题" class="headerlink" title="Github验证问题"></a>Github验证问题</h3><blockquote>
+<p>Please make sure you have the correct access rights<br>and the repository exists.<br>FATAL Something’s wrong. Maybe you can find the solution here: <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">http://hexo.io/docs/troubleshooting.html</a><br>Error: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>: Permission denied (publickey).<br>fatal: Could not read from remote repository.</p>
+</blockquote>
+<p>验证:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ssh -vT git@github.com</span><br></pre></td></tr></table></figure>
+<p>就会看到公钥有问题: /.ssh/rsa_github</p>
+<p>将此公钥添加到github: <a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a> 中.</p>
+<p>再次验证就行了.</p>
+
       
     </div>
     
@@ -618,7 +627,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git速查表"><span class="nav-number">1.</span> <span class="nav-text">Git速查表</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Git速查表"><span class="nav-number">1.</span> <span class="nav-text">Git速查表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github验证问题"><span class="nav-number">2.</span> <span class="nav-text">Github验证问题</span></a></li></ol></div>
             
 
           </div>
