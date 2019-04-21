@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-04-15T16:41:44.591Z</updated>
+  <updated>2019-04-21T04:20:46.102Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSP开发环境运行步骤</title>
+    <link href="https://ixyxj.github.io/2019/04/20/JSP%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E8%BF%90%E8%A1%8C%E6%AD%A5%E9%AA%A4/"/>
+    <id>https://ixyxj.github.io/2019/04/20/JSP开发环境运行步骤/</id>
+    <published>2019-04-20T08:19:06.000Z</published>
+    <updated>2019-04-21T04:20:46.102Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;记一次JSP运行经历&quot;&gt;&lt;a href=&quot;#记一次JSP运行经历&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="JavaWeb" scheme="https://ixyxj.github.io/tags/JavaWeb/"/>
+    
+  </entry>
   
   <entry>
     <title>win10教育版激活</title>
@@ -475,30 +499,6 @@
         
         
           &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;官网: &lt;a href=&quot;https://oozie.apache.org&quot; target=&quot;_blank&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tutorial-Impala</title>
-    <link href="https://ixyxj.github.io/2019/02/15/Tutorial-Impala/"/>
-    <id>https://ixyxj.github.io/2019/02/15/Tutorial-Impala/</id>
-    <published>2019-02-15T13:13:01.000Z</published>
-    <updated>2019-02-15T14:39:01.686Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot;
         
       
     
