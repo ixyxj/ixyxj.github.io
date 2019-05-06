@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ixyxj.github.io/"/>
-  <updated>2019-04-21T04:20:46.102Z</updated>
+  <updated>2019-05-06T17:07:06.686Z</updated>
   <id>https://ixyxj.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android源码查看指南</title>
+    <link href="https://ixyxj.github.io/2019/05/07/Android%E6%BA%90%E7%A0%81%E6%9F%A5%E7%9C%8B%E6%8C%87%E5%8D%97/"/>
+    <id>https://ixyxj.github.io/2019/05/07/Android源码查看指南/</id>
+    <published>2019-05-06T16:07:16.000Z</published>
+    <updated>2019-05-06T17:07:06.686Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Android-官网&quot;&gt;&lt;a href=&quot;#Android-官网&quot; class=&quot;headerlink&quot; title=&quot;Android 官网&quot;&gt;&lt;/a&gt;Android 官网&lt;/h3&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="https://ixyxj.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>JSP开发环境运行步骤</title>
@@ -475,30 +499,6 @@
         
           &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;REmote DIctionary Server(Redis) 是一个由Salvatore
-        
-      
-    
-    </summary>
-    
-    
-      <category term="Big Data" scheme="https://ixyxj.github.io/tags/Big-Data/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Oozie教程</title>
-    <link href="https://ixyxj.github.io/2019/02/15/Oozie%E6%95%99%E7%A8%8B/"/>
-    <id>https://ixyxj.github.io/2019/02/15/Oozie教程/</id>
-    <published>2019-02-15T14:39:35.000Z</published>
-    <updated>2019-02-15T15:09:36.647Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;官网: &lt;a href=&quot;https://oozie.apache.org&quot; target=&quot;_blank&quot;
         
       
     

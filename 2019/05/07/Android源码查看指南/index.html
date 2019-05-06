@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="Search,">
+  <meta name="keywords" content="Android,">
 
 
 
@@ -107,18 +107,18 @@
 
 
 
-<meta name="description" content="Elasticsearch介绍略 Solr和ES对比 搜索分词 正排索引  倒排索引   lucene简介源数据都被抽象成Document 基础ESearch流程: document -&amp;gt; 过滤粉丝 -&amp;gt; 倒排索引  无视数据来源,但是必须按照document规范格式.  节点的分发: document id % 节点数   数据汇聚:   节点能力相近,不能差异太大 横向扩展问题:">
-<meta name="keywords" content="Search">
+<meta name="description" content="Android 官网https://developer.android.com/docs Androidxref.comhttp://androidxref.com/ Google Githttps://android.googlesource.com/">
+<meta name="keywords" content="Android">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Elasticsearch入门">
-<meta property="og:url" content="https://ixyxj.github.io/2019/01/24/Elasticsearch入门/index.html">
+<meta property="og:title" content="Android源码查看指南">
+<meta property="og:url" content="https://ixyxj.github.io/2019/05/07/Android源码查看指南/index.html">
 <meta property="og:site_name" content="ixyxj">
-<meta property="og:description" content="Elasticsearch介绍略 Solr和ES对比 搜索分词 正排索引  倒排索引   lucene简介源数据都被抽象成Document 基础ESearch流程: document -&amp;gt; 过滤粉丝 -&amp;gt; 倒排索引  无视数据来源,但是必须按照document规范格式.  节点的分发: document id % 节点数   数据汇聚:   节点能力相近,不能差异太大 横向扩展问题:">
+<meta property="og:description" content="Android 官网https://developer.android.com/docs Androidxref.comhttp://androidxref.com/ Google Githttps://android.googlesource.com/">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-26T16:33:49.263Z">
+<meta property="og:updated_time" content="2019-05-06T17:07:06.686Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Elasticsearch入门">
-<meta name="twitter:description" content="Elasticsearch介绍略 Solr和ES对比 搜索分词 正排索引  倒排索引   lucene简介源数据都被抽象成Document 基础ESearch流程: document -&amp;gt; 过滤粉丝 -&amp;gt; 倒排索引  无视数据来源,但是必须按照document规范格式.  节点的分发: document id % 节点数   数据汇聚:   节点能力相近,不能差异太大 横向扩展问题:">
+<meta name="twitter:title" content="Android源码查看指南">
+<meta name="twitter:description" content="Android 官网https://developer.android.com/docs Androidxref.comhttp://androidxref.com/ Google Githttps://android.googlesource.com/">
 
 
 
@@ -148,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="https://ixyxj.github.io/2019/01/24/Elasticsearch入门/">
+  <link rel="canonical" href="https://ixyxj.github.io/2019/05/07/Android源码查看指南/">
 
 
 
 
 
-  <title>Elasticsearch入门 | ixyxj</title>
+  <title>Android源码查看指南 | ixyxj</title>
   
 
 
@@ -311,7 +311,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://ixyxj.github.io/2019/01/24/Elasticsearch入门/">
+    <link itemprop="mainEntityOfPage" href="https://ixyxj.github.io/2019/05/07/Android源码查看指南/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xyxj">
@@ -328,7 +328,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">Elasticsearch入门</h2>
+          <h2 class="post-title" itemprop="name headline">Android源码查看指南</h2>
         
 
         <div class="post-meta">
@@ -340,8 +340,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-24T23:01:57+08:00">
-                2019-01-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-05-07T00:07:16+08:00">
+                2019-05-07
               </time>
             
 
@@ -397,68 +397,9 @@
       
 
       
-        <h3 id="Elasticsearch介绍"><a href="#Elasticsearch介绍" class="headerlink" title="Elasticsearch介绍"></a>Elasticsearch介绍</h3><p>略</p>
-<p>Solr和ES对比</p>
-<h3 id="搜索分词"><a href="#搜索分词" class="headerlink" title="搜索分词"></a>搜索分词</h3><ul>
-<li><p>正排索引</p>
-</li>
-<li><p>倒排索引</p>
-</li>
-</ul>
-<h3 id="lucene简介"><a href="#lucene简介" class="headerlink" title="lucene简介"></a>lucene简介</h3><p>源数据都被抽象成Document</p>
-<h3 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h3><p>ESearch流程:</p>
-<p>document -&gt; 过滤粉丝 -&gt; 倒排索引</p>
-<ul>
-<li><p>无视数据来源,但是必须按照document规范格式.</p>
-</li>
-<li><p>节点的分发: document id % 节点数 </p>
-</li>
-<li><p>数据汇聚: </p>
-</li>
-<li>节点能力相近,不能差异太大</li>
-<li>横向扩展问题: 单点故障问题</li>
-<li><p>纵向扩展问题: 高可用, 主从架构</p>
-<ul>
-<li>从主机: 1.备份数据 2.分担主检索压力</li>
-<li>一台机器不能同时放同一个主从.</li>
-</ul>
-</li>
-<li><p>创建lucene进程</p>
-</li>
-</ul>
-<h3 id="集群搭建"><a href="#集群搭建" class="headerlink" title="集群搭建"></a>集群搭建</h3><p>/path/es/config/elasticsearch.yml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cluster.name: es6.2</span><br><span class="line">#节点名称,其余两个节点分别为node-2 和node-3</span><br><span class="line">node.name: node-1</span><br><span class="line">#指定该节点是否有资格被选举成为master节点，默认是true，es是默认集群中的第一台机器为master，如果这台机挂了就会重新选举master</span><br><span class="line">node.master: true</span><br><span class="line">#允许该节点存储数据(默认开启)</span><br><span class="line">node.data: true</span><br><span class="line">bootstrap.memory_lock: true</span><br><span class="line">network.host: 0.0.0.0</span><br><span class="line">http.port: 9200</span><br><span class="line">transport.tcp.port: 9300</span><br><span class="line">discovery.zen.ping.unicast.hosts: [&quot;192.168.80.147&quot;, &quot;192.168.80.148&quot;, &quot;192.168.80.149&quot;]</span><br><span class="line">discovery.zen.minimum_master_nodes: 2</span><br></pre></td></tr></table></figure>
-<p>操作</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@node6 ~]# scp -r es root@node8:`pwd`</span><br><span class="line">[root@node6 ~]# chown -R es:es /opt/es</span><br><span class="line">[root@node6 ~]# cd /opt</span><br><span class="line">[root@node6 opt]# ll</span><br><span class="line">total 0</span><br><span class="line">drwxr-xr-x. 7 es es 131 Jan 25 14:33 elasticsearch-6.5.4</span><br><span class="line">lrwxrwxrwx. 1 es es  20 Jan 25 12:19 es -&gt; elasticsearch-6.5.4/</span><br><span class="line">[root@node6 opt]# ll es/</span><br></pre></td></tr></table></figure>
-<p>问题:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[root@node6 ~]# vim /etc/security/limits.conf</span><br><span class="line">es soft memlock unlimited</span><br><span class="line">es hard memlock unlimited</span><br><span class="line">[root@node6 ~]# vim /etc/sysctl.conf</span><br><span class="line">[root@node6 ~]# sysctl -p</span><br><span class="line">vm.max_map_count = 655360</span><br><span class="line">fs.file-max = 655360</span><br><span class="line">[root@node6 es]# ulimit -n 65536 </span><br><span class="line">[root@node6 es]# ulimit -u 4096</span><br><span class="line"><span class="meta">#</span>## 依次打开</span><br><span class="line">vi /etc/security/limits.conf</span><br><span class="line">vi /etc/security/limits.d/20-nproc.conf</span><br><span class="line">vi /etc/sysctl.conf</span><br></pre></td></tr></table></figure>
-<p>nvm安装: <a href="https://github.com/creationix/nvm" target="_blank" rel="noopener">https://github.com/creationix/nvm</a></p>
-<p>插件安装</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> head</span><br><span class="line">git clone git://github.com/mobz/elasticsearch-head.git</span><br><span class="line">cd elasticsearch-head</span><br><span class="line">npm install</span><br><span class="line">npm run start</span><br></pre></td></tr></table></figure>
-<p>问题: 安装head插件失败</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PhantomJS not found on PATH</span><br><span class="line">Downloading https://github.com/Medium/phantomjs/releases/download/v2.1.1/phantomjs-2.1.1-linux-x86_64.tar.bz2</span><br><span class="line">Saving to /tmp/phantomjs/phantomjs-2.1.1-linux-x86_64.tar.bz2</span><br><span class="line">Receiving...</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span>##解决方案</span><br><span class="line">PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/ npm install phantomjs-prebuilt</span><br></pre></td></tr></table></figure>
-<h3 id="Rest简介"><a href="#Rest简介" class="headerlink" title="Rest简介"></a>Rest简介</h3><table>
-<thead>
-<tr>
-<th>资源</th>
-<th>GET</th>
-<th>PUT</th>
-<th>POST</th>
-<th>DELETE</th>
-<th>HEAD</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>URI</td>
-<td>获取对象的当前状态</td>
-<td>改变对象的状态</td>
-<td>创建对象</td>
-<td>删除对象</td>
-<td>获取头信息</td>
-</tr>
-</tbody>
-</table>
+        <h3 id="Android-官网"><a href="#Android-官网" class="headerlink" title="Android 官网"></a>Android 官网</h3><p><a href="https://developer.android.com/docs" target="_blank" rel="noopener">https://developer.android.com/docs</a></p>
+<h3 id="Androidxref-com"><a href="#Androidxref-com" class="headerlink" title="Androidxref.com"></a>Androidxref.com</h3><p><a href="http://androidxref.com/" target="_blank" rel="noopener">http://androidxref.com/</a></p>
+<h3 id="Google-Git"><a href="#Google-Git" class="headerlink" title="Google Git"></a>Google Git</h3><p><a href="https://android.googlesource.com/" target="_blank" rel="noopener">https://android.googlesource.com/</a></p>
 
       
     </div>
@@ -505,7 +446,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Search/" rel="tag"># Search</a>
+            <a href="/tags/Android/" rel="tag"># Android</a>
           
         </div>
       
@@ -518,8 +459,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/23/HBase入门/" rel="next" title="HBase入门">
-                <i class="fa fa-chevron-left"></i> HBase入门
+              <a href="/2019/04/20/JSP开发环境运行步骤/" rel="next" title="JSP开发环境运行步骤">
+                <i class="fa fa-chevron-left"></i> JSP开发环境运行步骤
               </a>
             
           </div>
@@ -527,10 +468,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/25/FFmpeg命令行大全/" rel="prev" title="FFmpeg命令行大全">
-                FFmpeg命令行大全 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -678,7 +615,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Elasticsearch介绍"><span class="nav-number">1.</span> <span class="nav-text">Elasticsearch介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索分词"><span class="nav-number">2.</span> <span class="nav-text">搜索分词</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#lucene简介"><span class="nav-number">3.</span> <span class="nav-text">lucene简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基础"><span class="nav-number">4.</span> <span class="nav-text">基础</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#集群搭建"><span class="nav-number">5.</span> <span class="nav-text">集群搭建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rest简介"><span class="nav-number">6.</span> <span class="nav-text">Rest简介</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Android-官网"><span class="nav-number">1.</span> <span class="nav-text">Android 官网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Androidxref-com"><span class="nav-number">2.</span> <span class="nav-text">Androidxref.com</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Google-Git"><span class="nav-number">3.</span> <span class="nav-text">Google Git</span></a></li></ol></div>
             
 
           </div>
